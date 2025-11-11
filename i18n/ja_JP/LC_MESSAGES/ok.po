@@ -21,7 +21,16 @@ msgstr ""
 msgid "800%"
 msgstr ""
 
+msgid "BAR_MIN_AREA"
+msgstr ""
+
+msgid "CONTROL_ZONE_RATIO"
+msgstr ""
+
 msgid "Combat Key"
+msgstr ""
+
+msgid "END_WAIT_SPACE"
 msgstr ""
 
 msgid "Game Hotkey Config"
@@ -30,10 +39,34 @@ msgstr ""
 msgid "Geniemon Key"
 msgstr ""
 
+msgid "ICON_MAX_AREA"
+msgstr ""
+
+msgid "ICON_MIN_AREA"
+msgstr ""
+
 msgid "In Game Hotkey for Skills"
 msgstr ""
 
+msgid "MAX_END_SEC"
+msgstr ""
+
+msgid "MAX_FIGHT_SEC"
+msgstr ""
+
+msgid "MAX_ROUNDS"
+msgstr ""
+
+msgid "MAX_START_SEC"
+msgstr ""
+
 msgid "Ultimate Key"
+msgstr ""
+
+msgid "right"
+msgstr ""
+
+msgid "v2.996版本 10 30火 60 70皎皎币 70调停 花生"
 msgstr ""
 
 msgid "x1"
@@ -43,136 +76,256 @@ msgid "x2"
 msgstr ""
 
 msgid "不使用"
-msgstr ""
+msgstr "使用しない"
 
 msgid "主画面侦测"
-msgstr ""
+msgstr "メイン画面検出"
 
-msgid "任务超时时间"
-msgstr ""
+msgid "使用外部移动逻辑自动打本"
+msgstr "外部移動ロジックを使用して自動周回"
 
 msgid "使用技能"
-msgstr ""
+msgstr "スキルを使用"
+
+msgid "使用键盘"
+msgstr "キーボードを使用"
 
 msgid "全自动"
-msgstr ""
+msgstr "全自動"
 
 msgid "刷几次"
-msgstr ""
+msgstr "周回数"
+
+msgid "刷武器密函时不建议使用"
+msgstr "武器密函の周回時には非推奨"
+
+msgid "副本类型"
+msgstr "ダンジョンタイプ"
 
 msgid "半自动"
-msgstr ""
+msgstr "半自動"
 
 msgid "单次提示响几次"
-msgstr ""
+msgstr "1回の通知音の回数"
 
 msgid "发出声音提醒"
-msgstr ""
+msgstr "音で通知"
+
+msgid "右键按住多久(秒)"
+msgstr "右クリック長押し時間(秒)"
+
+msgid "右键释放后等待多久(秒)"
+msgstr "右クリック解放後の待機時間(秒)"
+
+msgid "启动任务时和特定场景下会将鼠标移动到安全位置"
+msgstr "任務開始時や特定シーンでマウスカーソルを安全な位置に移動"
 
 msgid "启用自动穿引共鸣"
-msgstr ""
+msgstr "自動で共鳴プローブを有効化"
 
 msgid "在需要时发出声音提醒"
-msgstr ""
+msgstr "必要な時に音で通知"
 
 msgid "在需要跑图时时启用触发任务的自动穿引共鸣"
-msgstr ""
+msgstr "マップ移動が必要な際に任務を触発する共鳴プローブを自動で有効化"
+
+msgid "外部文件夹"
+msgstr "外部フォルダー"
 
 msgid "如果不在可操控角色的画面则结束任务"
-msgstr ""
+msgstr "操作可能なキャラクター画面でない場合は任務を終了"
+
+msgid "如果是无尽关卡，选择打几个轮次"
+msgstr "エンドレスステージの場合、ラウンド数を選択"
 
 msgid "委托手册"
-msgstr ""
+msgstr "依頼ハンドブック"
 
 msgid "左键按住多久"
-msgstr ""
+msgstr "左クリック長押し時間"
 
 msgid "左键释放后等待多久"
-msgstr ""
+msgstr "左クリック解放後の待機時間"
 
-msgid "开局向前走"
-msgstr ""
+msgid "开始阶段超时(秒)"
+msgstr "開始フェーズのタイムアウト(秒)"
 
-msgid "开局向前走几秒"
-msgstr ""
+msgid "弹出通知"
+msgstr "通知をポップアップ"
+
+msgid "总共刷多少次副本"
+msgstr "ダンジョンの総周回数"
 
 msgid "战技"
-msgstr ""
+msgstr "戦技"
 
 msgid "打几个轮次"
-msgstr ""
+msgstr "ラウンド数"
+
+msgid "扼守无尽"
+msgstr "エンドレス防衛"
+
+msgid "技能"
+msgstr "スキル"
 
 msgid "技能释放频率"
-msgstr ""
+msgstr "スキル使用頻度"
 
 msgid "挂机相关设置"
-msgstr ""
+msgstr "放置関連設定"
 
 msgid "挂机设置"
-msgstr ""
+msgstr "放置設定"
 
 msgid "按下时间"
-msgstr ""
+msgstr "押下時間"
+
+msgid "按住普攻"
+msgstr "通常攻撃長押し"
+
+msgid "探险无尽"
+msgstr "エンドレス探検"
 
 msgid "提示音"
-msgstr ""
+msgstr "通知音"
 
-msgid "放弃任务前等待的秒数"
-msgstr ""
+msgid "无悠闲全自动钓鱼 (原作者: B站无敌大蜜瓜)，如果识别不到鱼条修改配置降低面积要求"
+msgstr "のんびり全自動釣り (原作者: Bilibili 無敵大蜜瓜)、魚のバーが認識できない場合は設定で面積要件を下げてください"
+
+msgid "是否在任务中随机移动"
+msgstr "任務中にランダム移動するか"
+
+msgid "是否弹出windows通知"
+msgstr "Windows通知をポップアップするか"
+
+msgid "普攻"
+msgstr "通常攻撃"
+
+msgid "最大轮数(0=无限制)"
+msgstr "最大ラウンド数(0=無制限)"
 
 msgid "毎几秒释放一次技能"
-msgstr ""
+msgstr "数秒ごとにスキルを1回使用"
 
-msgid "波次超时时间"
-msgstr ""
+msgid "每轮结束等待时间(秒)"
+msgstr "各ラウンド終了後の待機時間(秒)"
+
+msgid "波次超时后将发出提示"
+msgstr "ウェーブタイムアウト後に通知"
+
+msgid "溜鱼阶段超时(秒)"
+msgstr "魚との格闘フェーズのタイムアウト(秒)"
 
 msgid "激活键"
-msgstr ""
+msgstr "有効化キー"
+
+msgid "示例-无巧手30火突破素材(1080p) by望目"
+msgstr "サンプル - 器用さなし30火突破素材(1080p) by望目"
 
 msgid "终结技"
-msgstr ""
+msgstr "終結技"
 
-msgid "自动65级魔之楔本"
-msgstr ""
+msgid "结束阶段超时(秒)"
+msgstr "終了フェーズのタイムアウト(秒)"
+
+msgid "自动30/65级魔之楔本"
+msgstr "自動30/65レベル魔の楔ダンジョン"
+
+msgid "自动70级皎皎币本"
+msgstr "自動70レベル皎皎コインダンジョン"
 
 msgid "自动勘察"
-msgstr ""
+msgstr "自動調査"
 
 msgid "自动战斗"
-msgstr ""
+msgstr "自動戦闘"
 
 msgid "自动扼守"
-msgstr ""
+msgstr "自動防衛"
 
 msgid "自动探险"
-msgstr ""
+msgstr "自動探検"
 
 msgid "自动点击肉鸽对话"
-msgstr ""
+msgstr "ローグライク会話の自動クリック"
 
 msgid "自动穿引共鸣"
-msgstr ""
+msgstr "自動共鳴プローブ"
 
 msgid "自动肉鸽对话"
-msgstr ""
+msgstr "自動ローグライク会話"
+
+msgid "自动花序弓蓄力瞄准"
+msgstr "花序弓の自動チャージ照準"
+
+msgid "自动选择首个密函和密函奖励"
+msgstr "最初の密函と報酬を自動選択"
 
 msgid "自动释放技能"
-msgstr ""
+msgstr "自動スキル使用"
+
+msgid "自动钓鱼"
+msgstr "自動釣り"
 
 msgid "自动驱离"
-msgstr ""
+msgstr "自動駆除"
 
 msgid "超时后将发出提示"
-msgstr ""
+msgstr "タイムアウト後に通知"
+
+msgid "超时后将重启任务"
+msgstr "タイムアウト後に任務を再起動"
+
+msgid "超时时间"
+msgstr "タイムアウト時間"
+
+msgid "跳过对话"
+msgstr "会話をスキップ"
 
 msgid "轮次"
-msgstr ""
+msgstr "ラウンド"
+
+msgid "选择mod目录下的外部逻辑"
+msgstr "modディレクトリから外部ロジックを選択"
+
+msgid "释放间隔"
+msgstr "使用間隔"
+
+msgid "键盘"
+msgstr "キーボード"
 
 msgid "间隔时间"
-msgstr ""
+msgstr "間隔時間"
 
-msgid "需使用鼠标侧键主动激活"
-msgstr ""
+msgid "防止鼠标干扰"
+msgstr "マウス干渉を防止"
 
-msgid "鼠标侧键"
-msgstr ""
+msgid "随机游走"
+msgstr "ランダムウォーク"
+
+msgid "需主动激活"
+msgstr "手動で有効化が必要"
+
+msgid "需主动激活，运行中也可使用左键打断"
+msgstr "手動で有効化が必要、実行中は左クリックで中断可能"
+
+msgid "需主动激活，运行中可使用右键或左键打断"
+msgstr "手動で有効化が必要、実行中は右または左クリックで中断可能"
+
+msgid "鱼条最小面积(像素)"
+msgstr "魚のバーの最小面積(ピクセル)"
+
+msgid "鱼标按空格区域占比(0-0.5)"
+msgstr "魚のマーカーのスペースキー押下エリア比率(0-0.5)"
+
+msgid "鱼标最大面积(像素)"
+msgstr "魚のマーカーの最大面積(ピクセル)"
+
+msgid "鱼标最小面积(像素)"
+msgstr "魚のマーカーの最小面積(ピクセル)"
+
+msgid "默认"
+msgstr "デフォルト"
+
+msgid "鼠标键或键盘按键"
+msgstr "マウスボタンまたはキーボードキー"

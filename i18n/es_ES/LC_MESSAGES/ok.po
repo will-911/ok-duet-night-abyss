@@ -21,7 +21,16 @@ msgstr ""
 msgid "800%"
 msgstr ""
 
+msgid "BAR_MIN_AREA"
+msgstr ""
+
+msgid "CONTROL_ZONE_RATIO"
+msgstr ""
+
 msgid "Combat Key"
+msgstr ""
+
+msgid "END_WAIT_SPACE"
 msgstr ""
 
 msgid "Game Hotkey Config"
@@ -30,10 +39,34 @@ msgstr ""
 msgid "Geniemon Key"
 msgstr ""
 
+msgid "ICON_MAX_AREA"
+msgstr ""
+
+msgid "ICON_MIN_AREA"
+msgstr ""
+
 msgid "In Game Hotkey for Skills"
 msgstr ""
 
+msgid "MAX_END_SEC"
+msgstr ""
+
+msgid "MAX_FIGHT_SEC"
+msgstr ""
+
+msgid "MAX_ROUNDS"
+msgstr ""
+
+msgid "MAX_START_SEC"
+msgstr ""
+
 msgid "Ultimate Key"
+msgstr ""
+
+msgid "right"
+msgstr ""
+
+msgid "v2.996版本 10 30火 60 70皎皎币 70调停 花生"
 msgstr ""
 
 msgid "x1"
@@ -43,136 +76,256 @@ msgid "x2"
 msgstr ""
 
 msgid "不使用"
-msgstr ""
+msgstr "No usar"
 
 msgid "主画面侦测"
-msgstr ""
+msgstr "Detección de pantalla principal"
 
-msgid "任务超时时间"
-msgstr ""
+msgid "使用外部移动逻辑自动打本"
+msgstr "Usar lógica de movimiento externa para mazmorras automáticas"
 
 msgid "使用技能"
-msgstr ""
+msgstr "Usar Habilidad"
+
+msgid "使用键盘"
+msgstr "Usar Teclado"
 
 msgid "全自动"
-msgstr ""
+msgstr "Totalmente automático"
 
 msgid "刷几次"
-msgstr ""
+msgstr "Número de intentos"
+
+msgid "刷武器密函时不建议使用"
+msgstr "No recomendado al farmear Cajas de Armas"
+
+msgid "副本类型"
+msgstr "Tipo de Mazmorra"
 
 msgid "半自动"
-msgstr ""
+msgstr "Semiautomático"
 
 msgid "单次提示响几次"
-msgstr ""
+msgstr "Sonidos de alerta por notificación"
 
 msgid "发出声音提醒"
-msgstr ""
+msgstr "Alerta de Sonido"
+
+msgid "右键按住多久(秒)"
+msgstr "Duración de pulsación del clic derecho (seg)"
+
+msgid "右键释放后等待多久(秒)"
+msgstr "Espera tras soltar el clic derecho (seg)"
+
+msgid "启动任务时和特定场景下会将鼠标移动到安全位置"
+msgstr "Mover el ratón a una posición segura al iniciar la tarea y en escenas específicas"
 
 msgid "启用自动穿引共鸣"
-msgstr ""
+msgstr "Activar Sonda de Resonancia Automática"
 
 msgid "在需要时发出声音提醒"
-msgstr ""
+msgstr "Reproducir alerta de sonido cuando sea necesario"
 
 msgid "在需要跑图时时启用触发任务的自动穿引共鸣"
-msgstr ""
+msgstr "Activar Sonda de Resonancia que activa tareas al necesitar recorrer el mapa"
+
+msgid "外部文件夹"
+msgstr "Carpeta Externa"
 
 msgid "如果不在可操控角色的画面则结束任务"
-msgstr ""
+msgstr "Finalizar tarea si no está en la pantalla del personaje controlable"
+
+msgid "如果是无尽关卡，选择打几个轮次"
+msgstr "Para fases infinitas, seleccione el número de rondas"
 
 msgid "委托手册"
-msgstr ""
+msgstr "Manual de Encargos"
 
 msgid "左键按住多久"
-msgstr ""
+msgstr "Duración de pulsación del clic izquierdo"
 
 msgid "左键释放后等待多久"
-msgstr ""
+msgstr "Espera tras soltar el clic izquierdo"
 
-msgid "开局向前走"
-msgstr ""
+msgid "开始阶段超时(秒)"
+msgstr "Tiempo de espera de la fase inicial (seg)"
 
-msgid "开局向前走几秒"
-msgstr ""
+msgid "弹出通知"
+msgstr "Notificación Emergente"
+
+msgid "总共刷多少次副本"
+msgstr "Número total de intentos de mazmorra"
 
 msgid "战技"
-msgstr ""
+msgstr "Habilidad de Combate"
 
 msgid "打几个轮次"
-msgstr ""
+msgstr "Número de rondas"
+
+msgid "扼守无尽"
+msgstr "Defensa Infinita"
+
+msgid "技能"
+msgstr "Habilidad"
 
 msgid "技能释放频率"
-msgstr ""
+msgstr "Frecuencia de Lanzamiento de Habilidad"
 
 msgid "挂机相关设置"
-msgstr ""
+msgstr "Ajustes Relacionados con AFK"
 
 msgid "挂机设置"
-msgstr ""
+msgstr "Ajustes de AFK"
 
 msgid "按下时间"
-msgstr ""
+msgstr "Duración de Pulsación"
+
+msgid "按住普攻"
+msgstr "Mantener Ataque Normal"
+
+msgid "探险无尽"
+msgstr "Exploración Infinita"
 
 msgid "提示音"
-msgstr ""
+msgstr "Sonido de Alerta"
 
-msgid "放弃任务前等待的秒数"
-msgstr ""
+msgid "无悠闲全自动钓鱼 (原作者: B站无敌大蜜瓜)，如果识别不到鱼条修改配置降低面积要求"
+msgstr "Pesca Automática Relajada (Autor Original: Bilibili 无敌大蜜瓜), si la barra de pesca no se detecta, reduzca el requisito de área en la configuración"
+
+msgid "是否在任务中随机移动"
+msgstr "Moverse aleatoriamente durante la tarea"
+
+msgid "是否弹出windows通知"
+msgstr "Mostrar notificaciones de Windows"
+
+msgid "普攻"
+msgstr "Ataque Normal"
+
+msgid "最大轮数(0=无限制)"
+msgstr "Rondas Máximas (0=ilimitado)"
 
 msgid "毎几秒释放一次技能"
-msgstr ""
+msgstr "Lanzar habilidad cada pocos segundos"
 
-msgid "波次超时时间"
-msgstr ""
+msgid "每轮结束等待时间(秒)"
+msgstr "Tiempo de espera después de cada ronda (seg)"
+
+msgid "波次超时后将发出提示"
+msgstr "Alerta al exceder el tiempo de la oleada"
+
+msgid "溜鱼阶段超时(秒)"
+msgstr "Tiempo de espera de la fase de lucha con el pez (seg)"
 
 msgid "激活键"
-msgstr ""
+msgstr "Tecla de Activación"
+
+msgid "示例-无巧手30火突破素材(1080p) by望目"
+msgstr "Ejemplo - Material de Ascensión de Fuego 30 sin Destreza (1080p) por 望目"
 
 msgid "终结技"
-msgstr ""
+msgstr "Habilidad Definitiva"
 
-msgid "自动65级魔之楔本"
-msgstr ""
+msgid "结束阶段超时(秒)"
+msgstr "Tiempo de espera de la fase final (seg)"
+
+msgid "自动30/65级魔之楔本"
+msgstr "Mazmorra Automática de Cuña del Diablo Nv 30/65"
+
+msgid "自动70级皎皎币本"
+msgstr "Mazmorra Automática de Créditos Shell Nv 70"
 
 msgid "自动勘察"
-msgstr ""
+msgstr "Exploración Automática"
 
 msgid "自动战斗"
-msgstr ""
+msgstr "Combate Automático"
 
 msgid "自动扼守"
-msgstr ""
+msgstr "Defensa Automática"
 
 msgid "自动探险"
-msgstr ""
+msgstr "Exploración Automática"
 
 msgid "自动点击肉鸽对话"
-msgstr ""
+msgstr "Clic automático en diálogos Roguelike"
 
 msgid "自动穿引共鸣"
-msgstr ""
+msgstr "Sonda de Resonancia Automática"
 
 msgid "自动肉鸽对话"
-msgstr ""
+msgstr "Diálogo Roguelike Automático"
+
+msgid "自动花序弓蓄力瞄准"
+msgstr "Apuntado con Carga Automática del Arco de Inflorescencia"
+
+msgid "自动选择首个密函和密函奖励"
+msgstr "Seleccionar automáticamente la primera caja y su recompensa"
 
 msgid "自动释放技能"
-msgstr ""
+msgstr "Lanzamiento Automático de Habilidad"
+
+msgid "自动钓鱼"
+msgstr "Pesca Automática"
 
 msgid "自动驱离"
-msgstr ""
+msgstr "Repeler Automáticamente"
 
 msgid "超时后将发出提示"
-msgstr ""
+msgstr "Alerta por tiempo de espera agotado"
+
+msgid "超时后将重启任务"
+msgstr "Reiniciar tarea por tiempo de espera agotado"
+
+msgid "超时时间"
+msgstr "Tiempo de Espera"
+
+msgid "跳过对话"
+msgstr "Saltar Diálogo"
 
 msgid "轮次"
-msgstr ""
+msgstr "Rondas"
+
+msgid "选择mod目录下的外部逻辑"
+msgstr "Seleccionar lógica externa del directorio de mods"
+
+msgid "释放间隔"
+msgstr "Intervalo de Lanzamiento"
+
+msgid "键盘"
+msgstr "Teclado"
 
 msgid "间隔时间"
-msgstr ""
+msgstr "Intervalo"
 
-msgid "需使用鼠标侧键主动激活"
-msgstr ""
+msgid "防止鼠标干扰"
+msgstr "Prevenir Interferencia del Ratón"
 
-msgid "鼠标侧键"
-msgstr ""
+msgid "随机游走"
+msgstr "Paseo Aleatorio"
+
+msgid "需主动激活"
+msgstr "Requiere activación manual"
+
+msgid "需主动激活，运行中也可使用左键打断"
+msgstr "Requiere activación manual, se puede interrumpir con el clic izquierdo"
+
+msgid "需主动激活，运行中可使用右键或左键打断"
+msgstr "Requiere activación manual, se puede interrumpir con el clic derecho o izquierdo"
+
+msgid "鱼条最小面积(像素)"
+msgstr "Área mínima de la barra de pesca (píxeles)"
+
+msgid "鱼标按空格区域占比(0-0.5)"
+msgstr "Ratio de la zona de pulsación de espacio del marcador de pesca (0-0.5)"
+
+msgid "鱼标最大面积(像素)"
+msgstr "Área máxima del marcador de pesca (píxeles)"
+
+msgid "鱼标最小面积(像素)"
+msgstr "Área mínima del marcador de pesca (píxeles)"
+
+msgid "默认"
+msgstr "Predeterminado"
+
+msgid "鼠标键或键盘按键"
+msgstr "Botón del ratón o tecla del teclado"

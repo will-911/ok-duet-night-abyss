@@ -21,7 +21,16 @@ msgstr ""
 msgid "800%"
 msgstr ""
 
+msgid "BAR_MIN_AREA"
+msgstr ""
+
+msgid "CONTROL_ZONE_RATIO"
+msgstr ""
+
 msgid "Combat Key"
+msgstr ""
+
+msgid "END_WAIT_SPACE"
 msgstr ""
 
 msgid "Game Hotkey Config"
@@ -30,10 +39,34 @@ msgstr ""
 msgid "Geniemon Key"
 msgstr ""
 
+msgid "ICON_MAX_AREA"
+msgstr ""
+
+msgid "ICON_MIN_AREA"
+msgstr ""
+
 msgid "In Game Hotkey for Skills"
 msgstr ""
 
+msgid "MAX_END_SEC"
+msgstr ""
+
+msgid "MAX_FIGHT_SEC"
+msgstr ""
+
+msgid "MAX_ROUNDS"
+msgstr ""
+
+msgid "MAX_START_SEC"
+msgstr ""
+
 msgid "Ultimate Key"
+msgstr ""
+
+msgid "right"
+msgstr ""
+
+msgid "v2.996版本 10 30火 60 70皎皎币 70调停 花生"
 msgstr ""
 
 msgid "x1"
@@ -43,136 +76,256 @@ msgid "x2"
 msgstr ""
 
 msgid "不使用"
-msgstr ""
+msgstr "사용 안 함"
 
 msgid "主画面侦测"
-msgstr ""
+msgstr "메인 화면 감지"
 
-msgid "任务超时时间"
-msgstr ""
+msgid "使用外部移动逻辑自动打本"
+msgstr "외부 이동 로직을 사용하여 자동 사냥"
 
 msgid "使用技能"
-msgstr ""
+msgstr "스킬 사용"
+
+msgid "使用键盘"
+msgstr "키보드 사용"
 
 msgid "全自动"
-msgstr ""
+msgstr "완전 자동"
 
 msgid "刷几次"
-msgstr ""
+msgstr "반복 횟수"
+
+msgid "刷武器密函时不建议使用"
+msgstr "무기 밀함 파밍 시 사용 비권장"
+
+msgid "副本类型"
+msgstr "던전 유형"
 
 msgid "半自动"
-msgstr ""
+msgstr "반자동"
 
 msgid "单次提示响几次"
-msgstr ""
+msgstr "알림당 소리 횟수"
 
 msgid "发出声音提醒"
-msgstr ""
+msgstr "소리 알림"
+
+msgid "右键按住多久(秒)"
+msgstr "오른쪽 클릭 유지 시간(초)"
+
+msgid "右键释放后等待多久(秒)"
+msgstr "오른쪽 클릭 해제 후 대기 시간(초)"
+
+msgid "启动任务时和特定场景下会将鼠标移动到安全位置"
+msgstr "임무 시작 및 특정 상황에서 마우스를 안전한 위치로 이동"
 
 msgid "启用自动穿引共鸣"
-msgstr ""
+msgstr "자동 공명 탐사 활성화"
 
 msgid "在需要时发出声音提醒"
-msgstr ""
+msgstr "필요시 소리 알림"
 
 msgid "在需要跑图时时启用触发任务的自动穿引共鸣"
-msgstr ""
+msgstr "맵 이동 필요 시 임무를 발동하는 자동 공명 탐사 활성화"
+
+msgid "外部文件夹"
+msgstr "외부 폴더"
 
 msgid "如果不在可操控角色的画面则结束任务"
-msgstr ""
+msgstr "조작 가능한 캐릭터 화면이 아니면 임무 종료"
+
+msgid "如果是无尽关卡，选择打几个轮次"
+msgstr "무한 스테이지인 경우, 라운드 수 선택"
 
 msgid "委托手册"
-msgstr ""
+msgstr "의뢰 핸드북"
 
 msgid "左键按住多久"
-msgstr ""
+msgstr "왼쪽 클릭 유지 시간"
 
 msgid "左键释放后等待多久"
-msgstr ""
+msgstr "왼쪽 클릭 해제 후 대기 시간"
 
-msgid "开局向前走"
-msgstr ""
+msgid "开始阶段超时(秒)"
+msgstr "시작 단계 시간 초과(초)"
 
-msgid "开局向前走几秒"
-msgstr ""
+msgid "弹出通知"
+msgstr "팝업 알림"
+
+msgid "总共刷多少次副本"
+msgstr "총 던전 반복 횟수"
 
 msgid "战技"
-msgstr ""
+msgstr "전투 스킬"
 
 msgid "打几个轮次"
-msgstr ""
+msgstr "라운드 수"
+
+msgid "扼守无尽"
+msgstr "무한 수비"
+
+msgid "技能"
+msgstr "스킬"
 
 msgid "技能释放频率"
-msgstr ""
+msgstr "스킬 시전 빈도"
 
 msgid "挂机相关设置"
-msgstr ""
+msgstr "자동 사냥 관련 설정"
 
 msgid "挂机设置"
-msgstr ""
+msgstr "자동 사냥 설정"
 
 msgid "按下时间"
-msgstr ""
+msgstr "누르는 시간"
+
+msgid "按住普攻"
+msgstr "일반 공격 길게 누르기"
+
+msgid "探险无尽"
+msgstr "무한 탐험"
 
 msgid "提示音"
-msgstr ""
+msgstr "알림음"
 
-msgid "放弃任务前等待的秒数"
-msgstr ""
+msgid "无悠闲全自动钓鱼 (原作者: B站无敌大蜜瓜)，如果识别不到鱼条修改配置降低面积要求"
+msgstr "느긋한 자동 낚시 (원작자: Bilibili 無敵大蜜瓜), 낚시 바가 인식되지 않으면 설정에서 면적 요구 사항을 낮추세요"
+
+msgid "是否在任务中随机移动"
+msgstr "임무 중 무작위 이동 여부"
+
+msgid "是否弹出windows通知"
+msgstr "Windows 알림 팝업 여부"
+
+msgid "普攻"
+msgstr "일반 공격"
+
+msgid "最大轮数(0=无限制)"
+msgstr "최대 라운드 (0=무제한)"
 
 msgid "毎几秒释放一次技能"
-msgstr ""
+msgstr "몇 초마다 스킬 시전"
 
-msgid "波次超时时间"
-msgstr ""
+msgid "每轮结束等待时间(秒)"
+msgstr "라운드 종료 후 대기 시간(초)"
+
+msgid "波次超时后将发出提示"
+msgstr "웨이브 시간 초과 시 알림"
+
+msgid "溜鱼阶段超时(秒)"
+msgstr "물고기 싸움 단계 시간 초과(초)"
 
 msgid "激活键"
-msgstr ""
+msgstr "활성화 키"
+
+msgid "示例-无巧手30火突破素材(1080p) by望目"
+msgstr "예시 - 재주 없음 30 불 속성 돌파 재료(1080p) by 望目"
 
 msgid "终结技"
-msgstr ""
+msgstr "궁극기"
 
-msgid "自动65级魔之楔本"
-msgstr ""
+msgid "结束阶段超时(秒)"
+msgstr "종료 단계 시간 초과(초)"
+
+msgid "自动30/65级魔之楔本"
+msgstr "자동 30/65레벨 마의 쐐기 던전"
+
+msgid "自动70级皎皎币本"
+msgstr "자동 70레벨 조개 화폐 던전"
 
 msgid "自动勘察"
-msgstr ""
+msgstr "자동 탐사"
 
 msgid "自动战斗"
-msgstr ""
+msgstr "자동 전투"
 
 msgid "自动扼守"
-msgstr ""
+msgstr "자동 수비"
 
 msgid "自动探险"
-msgstr ""
+msgstr "자동 탐험"
 
 msgid "自动点击肉鸽对话"
-msgstr ""
+msgstr "로그라이크 대화 자동 클릭"
 
 msgid "自动穿引共鸣"
-msgstr ""
+msgstr "자동 공명 탐사"
 
 msgid "自动肉鸽对话"
-msgstr ""
+msgstr "자동 로그라이크 대화"
+
+msgid "自动花序弓蓄力瞄准"
+msgstr "자동 꽃차례 활 차지 조준"
+
+msgid "自动选择首个密函和密函奖励"
+msgstr "첫 번째 밀함 및 보상 자동 선택"
 
 msgid "自动释放技能"
-msgstr ""
+msgstr "자동 스킬 시전"
+
+msgid "自动钓鱼"
+msgstr "자동 낚시"
 
 msgid "自动驱离"
-msgstr ""
+msgstr "자동 퇴치"
 
 msgid "超时后将发出提示"
-msgstr ""
+msgstr "시간 초과 시 알림"
+
+msgid "超时后将重启任务"
+msgstr "시간 초과 시 임무 재시작"
+
+msgid "超时时间"
+msgstr "시간 초과"
+
+msgid "跳过对话"
+msgstr "대화 건너뛰기"
 
 msgid "轮次"
-msgstr ""
+msgstr "라운드"
+
+msgid "选择mod目录下的外部逻辑"
+msgstr "mod 디렉토리에서 외부 로직 선택"
+
+msgid "释放间隔"
+msgstr "시전 간격"
+
+msgid "键盘"
+msgstr "키보드"
 
 msgid "间隔时间"
-msgstr ""
+msgstr "간격 시간"
 
-msgid "需使用鼠标侧键主动激活"
-msgstr ""
+msgid "防止鼠标干扰"
+msgstr "마우스 간섭 방지"
 
-msgid "鼠标侧键"
-msgstr ""
+msgid "随机游走"
+msgstr "무작위 배회"
+
+msgid "需主动激活"
+msgstr "수동 활성화 필요"
+
+msgid "需主动激活，运行中也可使用左键打断"
+msgstr "수동 활성화 필요, 실행 중 왼쪽 클릭으로 중단 가능"
+
+msgid "需主动激活，运行中可使用右键或左键打断"
+msgstr "수동 활성화 필요, 실행 중 오른쪽 또는 왼쪽 클릭으로 중단 가능"
+
+msgid "鱼条最小面积(像素)"
+msgstr "낚시 바 최소 면적(픽셀)"
+
+msgid "鱼标按空格区域占比(0-0.5)"
+msgstr "낚시 마커 스페이스바 누름 영역 비율(0-0.5)"
+
+msgid "鱼标最大面积(像素)"
+msgstr "낚시 마커 최대 면적(픽셀)"
+
+msgid "鱼标最小面积(像素)"
+msgstr "낚시 마커 최소 면적(픽셀)"
+
+msgid "默认"
+msgstr "기본값"
+
+msgid "鼠标键或键盘按键"
+msgstr "마우스 버튼 또는 키보드 키"

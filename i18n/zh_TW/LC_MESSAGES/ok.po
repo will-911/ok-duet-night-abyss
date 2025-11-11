@@ -21,7 +21,16 @@ msgstr ""
 msgid "800%"
 msgstr ""
 
+msgid "BAR_MIN_AREA"
+msgstr ""
+
+msgid "CONTROL_ZONE_RATIO"
+msgstr ""
+
 msgid "Combat Key"
+msgstr ""
+
+msgid "END_WAIT_SPACE"
 msgstr ""
 
 msgid "Game Hotkey Config"
@@ -30,10 +39,34 @@ msgstr ""
 msgid "Geniemon Key"
 msgstr ""
 
+msgid "ICON_MAX_AREA"
+msgstr ""
+
+msgid "ICON_MIN_AREA"
+msgstr ""
+
 msgid "In Game Hotkey for Skills"
 msgstr ""
 
+msgid "MAX_END_SEC"
+msgstr ""
+
+msgid "MAX_FIGHT_SEC"
+msgstr ""
+
+msgid "MAX_ROUNDS"
+msgstr ""
+
+msgid "MAX_START_SEC"
+msgstr ""
+
 msgid "Ultimate Key"
+msgstr ""
+
+msgid "right"
+msgstr ""
+
+msgid "v2.996版本 10 30火 60 70皎皎币 70调停 花生"
 msgstr ""
 
 msgid "x1"
@@ -43,136 +76,256 @@ msgid "x2"
 msgstr ""
 
 msgid "不使用"
-msgstr ""
+msgstr "不使用"
 
 msgid "主画面侦测"
-msgstr ""
+msgstr "主畫面偵測"
 
-msgid "任务超时时间"
-msgstr ""
+msgid "使用外部移动逻辑自动打本"
+msgstr "使用外部移動邏輯自動打本"
 
 msgid "使用技能"
-msgstr ""
+msgstr "使用技能"
+
+msgid "使用键盘"
+msgstr "使用鍵盤"
 
 msgid "全自动"
-msgstr ""
+msgstr "全自動"
 
 msgid "刷几次"
-msgstr ""
+msgstr "刷幾次"
+
+msgid "刷武器密函时不建议使用"
+msgstr "刷武器密函時不建議使用"
+
+msgid "副本类型"
+msgstr "副本類型"
 
 msgid "半自动"
-msgstr ""
+msgstr "半自動"
 
 msgid "单次提示响几次"
-msgstr ""
+msgstr "單次提示響幾次"
 
 msgid "发出声音提醒"
-msgstr ""
+msgstr "發出聲音提醒"
+
+msgid "右键按住多久(秒)"
+msgstr "右鍵按住多久(秒)"
+
+msgid "右键释放后等待多久(秒)"
+msgstr "右鍵釋放後等待多久(秒)"
+
+msgid "启动任务时和特定场景下会将鼠标移动到安全位置"
+msgstr "啟動任務時和特定場景下會將滑鼠移動到安全位置"
 
 msgid "启用自动穿引共鸣"
-msgstr ""
+msgstr "啟用自動穿引共鳴"
 
 msgid "在需要时发出声音提醒"
-msgstr ""
+msgstr "在需要時發出聲音提醒"
 
 msgid "在需要跑图时时启用触发任务的自动穿引共鸣"
-msgstr ""
+msgstr "在需要跑圖時啟用觸發任務的自動穿引共鳴"
+
+msgid "外部文件夹"
+msgstr "外部資料夾"
 
 msgid "如果不在可操控角色的画面则结束任务"
-msgstr ""
+msgstr "如果不在可操控角色的畫面則結束任務"
+
+msgid "如果是无尽关卡，选择打几个轮次"
+msgstr "如果是無盡關卡，選擇打幾個輪次"
 
 msgid "委托手册"
-msgstr ""
+msgstr "委託手冊"
 
 msgid "左键按住多久"
-msgstr ""
+msgstr "左鍵按住多久"
 
 msgid "左键释放后等待多久"
-msgstr ""
+msgstr "左鍵釋放後等待多久"
 
-msgid "开局向前走"
-msgstr ""
+msgid "开始阶段超时(秒)"
+msgstr "開始階段超時(秒)"
 
-msgid "开局向前走几秒"
-msgstr ""
+msgid "弹出通知"
+msgstr "彈出通知"
+
+msgid "总共刷多少次副本"
+msgstr "總共刷多少次副本"
 
 msgid "战技"
-msgstr ""
+msgstr "戰技"
 
 msgid "打几个轮次"
-msgstr ""
+msgstr "打幾個輪次"
+
+msgid "扼守无尽"
+msgstr "扼守無盡"
+
+msgid "技能"
+msgstr "技能"
 
 msgid "技能释放频率"
-msgstr ""
+msgstr "技能釋放頻率"
 
 msgid "挂机相关设置"
-msgstr ""
+msgstr "掛機相關設定"
 
 msgid "挂机设置"
-msgstr ""
+msgstr "掛機設定"
 
 msgid "按下时间"
-msgstr ""
+msgstr "按下時間"
+
+msgid "按住普攻"
+msgstr "按住普攻"
+
+msgid "探险无尽"
+msgstr "探險無盡"
 
 msgid "提示音"
-msgstr ""
+msgstr "提示音"
 
-msgid "放弃任务前等待的秒数"
-msgstr ""
+msgid "无悠闲全自动钓鱼 (原作者: B站无敌大蜜瓜)，如果识别不到鱼条修改配置降低面积要求"
+msgstr "無悠閒全自動釣魚 (原作者: B站無敵大蜜瓜)，如果識別不到魚條修改配置降低面積要求"
+
+msgid "是否在任务中随机移动"
+msgstr "是否在任務中隨機移動"
+
+msgid "是否弹出windows通知"
+msgstr "是否彈出windows通知"
+
+msgid "普攻"
+msgstr "普攻"
+
+msgid "最大轮数(0=无限制)"
+msgstr "最大輪數(0=無限制)"
 
 msgid "毎几秒释放一次技能"
-msgstr ""
+msgstr "每幾秒釋放一次技能"
 
-msgid "波次超时时间"
-msgstr ""
+msgid "每轮结束等待时间(秒)"
+msgstr "每輪結束等待時間(秒)"
+
+msgid "波次超时后将发出提示"
+msgstr "波次超時後將發出提示"
+
+msgid "溜鱼阶段超时(秒)"
+msgstr "溜魚階段超時(秒)"
 
 msgid "激活键"
-msgstr ""
+msgstr "啟用鍵"
+
+msgid "示例-无巧手30火突破素材(1080p) by望目"
+msgstr "範例-無巧手30火突破素材(1080p) by望目"
 
 msgid "终结技"
-msgstr ""
+msgstr "終結技"
 
-msgid "自动65级魔之楔本"
-msgstr ""
+msgid "结束阶段超时(秒)"
+msgstr "結束階段超時(秒)"
+
+msgid "自动30/65级魔之楔本"
+msgstr "自動30/65級魔之楔本"
+
+msgid "自动70级皎皎币本"
+msgstr "自動70級皎皎幣本"
 
 msgid "自动勘察"
-msgstr ""
+msgstr "自動勘察"
 
 msgid "自动战斗"
-msgstr ""
+msgstr "自動戰鬥"
 
 msgid "自动扼守"
-msgstr ""
+msgstr "自動扼守"
 
 msgid "自动探险"
-msgstr ""
+msgstr "自動探險"
 
 msgid "自动点击肉鸽对话"
-msgstr ""
+msgstr "自動點擊肉鴿對話"
 
 msgid "自动穿引共鸣"
-msgstr ""
+msgstr "自動穿引共鳴"
 
 msgid "自动肉鸽对话"
-msgstr ""
+msgstr "自動肉鴿對話"
+
+msgid "自动花序弓蓄力瞄准"
+msgstr "自動花序弓蓄力瞄準"
+
+msgid "自动选择首个密函和密函奖励"
+msgstr "自動選擇首個密函和密函獎勵"
 
 msgid "自动释放技能"
-msgstr ""
+msgstr "自動釋放技能"
+
+msgid "自动钓鱼"
+msgstr "自動釣魚"
 
 msgid "自动驱离"
-msgstr ""
+msgstr "自動驅離"
 
 msgid "超时后将发出提示"
-msgstr ""
+msgstr "超時後將發出提示"
+
+msgid "超时后将重启任务"
+msgstr "超時後將重啟任務"
+
+msgid "超时时间"
+msgstr "超時時間"
+
+msgid "跳过对话"
+msgstr "跳過對話"
 
 msgid "轮次"
-msgstr ""
+msgstr "輪次"
+
+msgid "选择mod目录下的外部逻辑"
+msgstr "選擇mod目錄下的外部邏輯"
+
+msgid "释放间隔"
+msgstr "釋放間隔"
+
+msgid "键盘"
+msgstr "鍵盤"
 
 msgid "间隔时间"
-msgstr ""
+msgstr "間隔時間"
 
-msgid "需使用鼠标侧键主动激活"
-msgstr ""
+msgid "防止鼠标干扰"
+msgstr "防止滑鼠干擾"
 
-msgid "鼠标侧键"
-msgstr ""
+msgid "随机游走"
+msgstr "隨機遊走"
+
+msgid "需主动激活"
+msgstr "需主動啟用"
+
+msgid "需主动激活，运行中也可使用左键打断"
+msgstr "需主動啟用，運行中也可使用左鍵打斷"
+
+msgid "需主动激活，运行中可使用右键或左键打断"
+msgstr "需主動啟用，運行中可使用右鍵或左鍵打斷"
+
+msgid "鱼条最小面积(像素)"
+msgstr "魚條最小面積(像素)"
+
+msgid "鱼标按空格区域占比(0-0.5)"
+msgstr "魚標按空格區域佔比(0-0.5)"
+
+msgid "鱼标最大面积(像素)"
+msgstr "魚標最大面積(像素)"
+
+msgid "鱼标最小面积(像素)"
+msgstr "魚標最小面積(像素)"
+
+msgid "默认"
+msgstr "預設"
+
+msgid "鼠标键或键盘按键"
+msgstr "滑鼠鍵或鍵盤按鍵"

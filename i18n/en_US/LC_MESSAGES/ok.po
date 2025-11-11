@@ -9,81 +9,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "一键日常"
-msgstr "One-click Dailies"
-
-msgid "从要推的图的最左边开始"
-msgstr "Start from the leftmost stage to clear"
-
-msgid "体力本"
-msgstr "Stamina Stage"
-
-msgid "公共区"
-msgstr "Public Area"
-
-msgid "兵棋推演"
-msgstr "War Chess Simulation"
-
-msgid "军备解析"
-msgstr "Armament Analysis"
-
-msgid "冲锋"
-msgstr "SMG & MG"
-
-msgid "决策构象"
-msgstr "Decision Configuration"
-
-msgid "刷钱本"
-msgstr "Gold Farming Stage"
-
-msgid "大月卡"
-msgstr "Premium Monthly Card"
-
-msgid "尘烟"
-msgstr "Dust Smoke"
-
-msgid "手枪"
-msgstr "HG"
-
-msgid "推图"
-msgstr "Clear Stages"
-
-msgid "收菜"
-msgstr "Collect Resources"
-
-msgid "活动情报补给"
-msgstr "Event Intel Supply"
-
-msgid "活动自律"
-msgstr "Event Auto-Battle"
-
-msgid "深度搜索"
-msgstr "Deep Search"
-
-msgid "狙击"
-msgstr "RF & BLD"
-
-msgid "班组"
-msgstr "Squad"
-
-msgid "突击"
-msgstr "AR & SG"
-
-msgid "竞技场"
-msgstr "Arena"
-
-msgid "自动刷体力"
-msgstr "Auto-Farm Stamina"
-
-msgid "购买免费礼包"
-msgstr "Claim Free Pack"
-
-msgid "邮件"
-msgstr "Mail"
-
-msgid "领任务"
-msgstr "Claim Missions"
-
 msgid "100%"
 msgstr ""
 
@@ -96,7 +21,16 @@ msgstr ""
 msgid "800%"
 msgstr ""
 
+msgid "BAR_MIN_AREA"
+msgstr ""
+
+msgid "CONTROL_ZONE_RATIO"
+msgstr ""
+
 msgid "Combat Key"
+msgstr ""
+
+msgid "END_WAIT_SPACE"
 msgstr ""
 
 msgid "Game Hotkey Config"
@@ -105,10 +39,34 @@ msgstr ""
 msgid "Geniemon Key"
 msgstr ""
 
+msgid "ICON_MAX_AREA"
+msgstr ""
+
+msgid "ICON_MIN_AREA"
+msgstr ""
+
 msgid "In Game Hotkey for Skills"
 msgstr ""
 
+msgid "MAX_END_SEC"
+msgstr ""
+
+msgid "MAX_FIGHT_SEC"
+msgstr ""
+
+msgid "MAX_ROUNDS"
+msgstr ""
+
+msgid "MAX_START_SEC"
+msgstr ""
+
 msgid "Ultimate Key"
+msgstr ""
+
+msgid "right"
+msgstr ""
+
+msgid "v2.996版本 10 30火 60 70皎皎币 70调停 花生"
 msgstr ""
 
 msgid "x1"
@@ -118,136 +76,256 @@ msgid "x2"
 msgstr ""
 
 msgid "不使用"
-msgstr ""
+msgstr "Not Used"
 
 msgid "主画面侦测"
-msgstr ""
+msgstr "Main Screen Detection"
 
-msgid "任务超时时间"
-msgstr ""
+msgid "使用外部移动逻辑自动打本"
+msgstr "Use external movement logic for auto-dungeon"
 
 msgid "使用技能"
-msgstr ""
+msgstr "Use Skill"
+
+msgid "使用键盘"
+msgstr "Use Keyboard"
 
 msgid "全自动"
-msgstr ""
+msgstr "Fully Automatic"
 
 msgid "刷几次"
-msgstr ""
+msgstr "Number of Runs"
+
+msgid "刷武器密函时不建议使用"
+msgstr "Not recommended when farming Weapon Caskets"
+
+msgid "副本类型"
+msgstr "Dungeon Type"
 
 msgid "半自动"
-msgstr ""
+msgstr "Semi-Automatic"
 
 msgid "单次提示响几次"
-msgstr ""
+msgstr "Alert sounds per notification"
 
 msgid "发出声音提醒"
-msgstr ""
+msgstr "Sound Alert"
+
+msgid "右键按住多久(秒)"
+msgstr "Right-click hold duration (sec)"
+
+msgid "右键释放后等待多久(秒)"
+msgstr "Wait after right-click release (sec)"
+
+msgid "启动任务时和特定场景下会将鼠标移动到安全位置"
+msgstr "Move mouse to a safe position on task start and in specific scenes"
 
 msgid "启用自动穿引共鸣"
-msgstr ""
+msgstr "Enable Auto Resonance Probe"
 
 msgid "在需要时发出声音提醒"
-msgstr ""
+msgstr "Play sound alert when needed"
 
 msgid "在需要跑图时时启用触发任务的自动穿引共鸣"
-msgstr ""
+msgstr "Enable task-triggering Resonance Probe when map traversal is needed"
+
+msgid "外部文件夹"
+msgstr "External Folder"
 
 msgid "如果不在可操控角色的画面则结束任务"
-msgstr ""
+msgstr "End task if not on the controllable character screen"
+
+msgid "如果是无尽关卡，选择打几个轮次"
+msgstr "For endless stages, select number of rounds"
 
 msgid "委托手册"
-msgstr ""
+msgstr "Commission Handbook"
 
 msgid "左键按住多久"
-msgstr ""
+msgstr "Left-click hold duration"
 
 msgid "左键释放后等待多久"
-msgstr ""
+msgstr "Wait after left-click release"
 
-msgid "开局向前走"
-msgstr ""
+msgid "开始阶段超时(秒)"
+msgstr "Start phase timeout (sec)"
 
-msgid "开局向前走几秒"
-msgstr ""
+msgid "弹出通知"
+msgstr "Popup Notification"
+
+msgid "总共刷多少次副本"
+msgstr "Total number of dungeon runs"
 
 msgid "战技"
-msgstr ""
+msgstr "Combat Skill"
 
 msgid "打几个轮次"
-msgstr ""
+msgstr "Number of rounds"
+
+msgid "扼守无尽"
+msgstr "Endless Defense"
+
+msgid "技能"
+msgstr "Skill"
 
 msgid "技能释放频率"
-msgstr ""
+msgstr "Skill Cast Frequency"
 
 msgid "挂机相关设置"
-msgstr ""
+msgstr "AFK Related Settings"
 
 msgid "挂机设置"
-msgstr ""
+msgstr "AFK Settings"
 
 msgid "按下时间"
-msgstr ""
+msgstr "Press Duration"
+
+msgid "按住普攻"
+msgstr "Hold Normal Attack"
+
+msgid "探险无尽"
+msgstr "Endless Exploration"
 
 msgid "提示音"
-msgstr ""
+msgstr "Alert Sound"
 
-msgid "放弃任务前等待的秒数"
-msgstr ""
+msgid "无悠闲全自动钓鱼 (原作者: B站无敌大蜜瓜)，如果识别不到鱼条修改配置降低面积要求"
+msgstr "Leisurely Auto-Fishing (Original Author: Bilibili 无敌大蜜瓜), if the fishing bar is not detected, lower the area requirement in the configuration"
+
+msgid "是否在任务中随机移动"
+msgstr "Randomly move during the task"
+
+msgid "是否弹出windows通知"
+msgstr "Popup Windows notifications"
+
+msgid "普攻"
+msgstr "Normal Attack"
+
+msgid "最大轮数(0=无限制)"
+msgstr "Max Rounds (0=unlimited)"
 
 msgid "毎几秒释放一次技能"
-msgstr ""
+msgstr "Cast skill every few seconds"
 
-msgid "波次超时时间"
-msgstr ""
+msgid "每轮结束等待时间(秒)"
+msgstr "Wait time after each round (sec)"
+
+msgid "波次超时后将发出提示"
+msgstr "Alert on wave timeout"
+
+msgid "溜鱼阶段超时(秒)"
+msgstr "Fish fighting phase timeout (sec)"
 
 msgid "激活键"
-msgstr ""
+msgstr "Activation Key"
+
+msgid "示例-无巧手30火突破素材(1080p) by望目"
+msgstr "Example - No-Dex 30 Fire Ascend Material (1080p) by 望目"
 
 msgid "终结技"
-msgstr ""
+msgstr "Ultimate"
 
-msgid "自动65级魔之楔本"
-msgstr ""
+msgid "结束阶段超时(秒)"
+msgstr "End phase timeout (sec)"
+
+msgid "自动30/65级魔之楔本"
+msgstr "Auto Lvl 30/65 Devil's Wedge Dungeon"
+
+msgid "自动70级皎皎币本"
+msgstr "Auto Lvl 70 Shell Credit Dungeon"
 
 msgid "自动勘察"
-msgstr ""
+msgstr "Auto Excavation"
 
 msgid "自动战斗"
-msgstr ""
+msgstr "Auto Combat"
 
 msgid "自动扼守"
-msgstr ""
+msgstr "Auto Defence"
 
 msgid "自动探险"
-msgstr ""
+msgstr "Auto Exploration"
 
 msgid "自动点击肉鸽对话"
-msgstr ""
+msgstr "Auto-click Roguelike dialogue"
 
 msgid "自动穿引共鸣"
-msgstr ""
+msgstr "Auto Resonance Probe"
 
 msgid "自动肉鸽对话"
-msgstr ""
+msgstr "Auto Roguelike Dialogue"
+
+msgid "自动花序弓蓄力瞄准"
+msgstr "Auto Inflorescence Bow Charged Aiming"
+
+msgid "自动选择首个密函和密函奖励"
+msgstr "Auto-select first casket and its reward"
 
 msgid "自动释放技能"
-msgstr ""
+msgstr "Auto Cast Skill"
+
+msgid "自动钓鱼"
+msgstr "Auto Fishing"
 
 msgid "自动驱离"
-msgstr ""
+msgstr "Auto Expulsion"
 
 msgid "超时后将发出提示"
-msgstr ""
+msgstr "Alert on timeout"
+
+msgid "超时后将重启任务"
+msgstr "Restart task on timeout"
+
+msgid "超时时间"
+msgstr "Timeout"
+
+msgid "跳过对话"
+msgstr "Skip Dialogue"
 
 msgid "轮次"
-msgstr ""
+msgstr "Rounds"
+
+msgid "选择mod目录下的外部逻辑"
+msgstr "Select external logic from mod directory"
+
+msgid "释放间隔"
+msgstr "Cast Interval"
+
+msgid "键盘"
+msgstr "Keyboard"
 
 msgid "间隔时间"
-msgstr ""
+msgstr "Interval"
 
-msgid "需使用鼠标侧键主动激活"
-msgstr ""
+msgid "防止鼠标干扰"
+msgstr "Prevent Mouse Interference"
 
-msgid "鼠标侧键"
-msgstr ""
+msgid "随机游走"
+msgstr "Random Walk"
+
+msgid "需主动激活"
+msgstr "Requires manual activation"
+
+msgid "需主动激活，运行中也可使用左键打断"
+msgstr "Requires manual activation, can be interrupted by left-click"
+
+msgid "需主动激活，运行中可使用右键或左键打断"
+msgstr "Requires manual activation, can be interrupted by right or left-click"
+
+msgid "鱼条最小面积(像素)"
+msgstr "Min fishing bar area (pixels)"
+
+msgid "鱼标按空格区域占比(0-0.5)"
+msgstr "Fishing marker spacebar press zone ratio (0-0.5)"
+
+msgid "鱼标最大面积(像素)"
+msgstr "Max fishing marker area (pixels)"
+
+msgid "鱼标最小面积(像素)"
+msgstr "Min fishing marker area (pixels)"
+
+msgid "默认"
+msgstr "Default"
+
+msgid "鼠标键或键盘按键"
+msgstr "Mouse button or keyboard key"

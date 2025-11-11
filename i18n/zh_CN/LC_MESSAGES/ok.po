@@ -9,81 +9,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "一键日常"
-msgstr ""
-
-msgid "从要推的图的最左边开始"
-msgstr ""
-
-msgid "体力本"
-msgstr ""
-
-msgid "公共区"
-msgstr ""
-
-msgid "兵棋推演"
-msgstr ""
-
-msgid "军备解析"
-msgstr ""
-
-msgid "冲锋"
-msgstr ""
-
-msgid "决策构象"
-msgstr ""
-
-msgid "刷钱本"
-msgstr ""
-
-msgid "大月卡"
-msgstr ""
-
-msgid "尘烟"
-msgstr ""
-
-msgid "手枪"
-msgstr ""
-
-msgid "推图"
-msgstr ""
-
-msgid "收菜"
-msgstr ""
-
-msgid "活动情报补给"
-msgstr ""
-
-msgid "活动自律"
-msgstr ""
-
-msgid "深度搜索"
-msgstr ""
-
-msgid "狙击"
-msgstr ""
-
-msgid "班组"
-msgstr ""
-
-msgid "突击"
-msgstr ""
-
-msgid "竞技场"
-msgstr ""
-
-msgid "自动刷体力"
-msgstr ""
-
-msgid "购买免费礼包"
-msgstr ""
-
-msgid "邮件"
-msgstr ""
-
-msgid "领任务"
-msgstr ""
-
 msgid "100%"
 msgstr ""
 
@@ -96,20 +21,53 @@ msgstr ""
 msgid "800%"
 msgstr ""
 
+msgid "BAR_MIN_AREA"
+msgstr ""
+
+msgid "CONTROL_ZONE_RATIO"
+msgstr ""
+
 msgid "Combat Key"
-msgstr "战技"
+msgstr ""
+
+msgid "END_WAIT_SPACE"
+msgstr ""
 
 msgid "Game Hotkey Config"
-msgstr "游戏快捷键设置"
+msgstr ""
 
 msgid "Geniemon Key"
-msgstr "魔灵支援"
+msgstr ""
+
+msgid "ICON_MAX_AREA"
+msgstr ""
+
+msgid "ICON_MIN_AREA"
+msgstr ""
 
 msgid "In Game Hotkey for Skills"
-msgstr "游戏内技能快捷键"
+msgstr ""
+
+msgid "MAX_END_SEC"
+msgstr ""
+
+msgid "MAX_FIGHT_SEC"
+msgstr ""
+
+msgid "MAX_ROUNDS"
+msgstr ""
+
+msgid "MAX_START_SEC"
+msgstr ""
 
 msgid "Ultimate Key"
-msgstr "终结技"
+msgstr ""
+
+msgid "right"
+msgstr ""
+
+msgid "v2.996版本 10 30火 60 70皎皎币 70调停 花生"
+msgstr ""
 
 msgid "x1"
 msgstr ""
@@ -123,16 +81,25 @@ msgstr ""
 msgid "主画面侦测"
 msgstr ""
 
-msgid "任务超时时间"
+msgid "使用外部移动逻辑自动打本"
 msgstr ""
 
 msgid "使用技能"
+msgstr ""
+
+msgid "使用键盘"
 msgstr ""
 
 msgid "全自动"
 msgstr ""
 
 msgid "刷几次"
+msgstr ""
+
+msgid "刷武器密函时不建议使用"
+msgstr ""
+
+msgid "副本类型"
 msgstr ""
 
 msgid "半自动"
@@ -144,6 +111,15 @@ msgstr ""
 msgid "发出声音提醒"
 msgstr ""
 
+msgid "右键按住多久(秒)"
+msgstr ""
+
+msgid "右键释放后等待多久(秒)"
+msgstr ""
+
+msgid "启动任务时和特定场景下会将鼠标移动到安全位置"
+msgstr ""
+
 msgid "启用自动穿引共鸣"
 msgstr ""
 
@@ -153,7 +129,13 @@ msgstr ""
 msgid "在需要跑图时时启用触发任务的自动穿引共鸣"
 msgstr ""
 
+msgid "外部文件夹"
+msgstr ""
+
 msgid "如果不在可操控角色的画面则结束任务"
+msgstr ""
+
+msgid "如果是无尽关卡，选择打几个轮次"
 msgstr ""
 
 msgid "委托手册"
@@ -165,16 +147,25 @@ msgstr ""
 msgid "左键释放后等待多久"
 msgstr ""
 
-msgid "开局向前走"
+msgid "开始阶段超时(秒)"
 msgstr ""
 
-msgid "开局向前走几秒"
+msgid "弹出通知"
+msgstr ""
+
+msgid "总共刷多少次副本"
 msgstr ""
 
 msgid "战技"
 msgstr ""
 
 msgid "打几个轮次"
+msgstr ""
+
+msgid "扼守无尽"
+msgstr ""
+
+msgid "技能"
 msgstr ""
 
 msgid "技能释放频率"
@@ -189,25 +180,58 @@ msgstr ""
 msgid "按下时间"
 msgstr ""
 
+msgid "按住普攻"
+msgstr ""
+
+msgid "探险无尽"
+msgstr ""
+
 msgid "提示音"
 msgstr ""
 
-msgid "放弃任务前等待的秒数"
+msgid "无悠闲全自动钓鱼 (原作者: B站无敌大蜜瓜)，如果识别不到鱼条修改配置降低面积要求"
+msgstr ""
+
+msgid "是否在任务中随机移动"
+msgstr ""
+
+msgid "是否弹出windows通知"
+msgstr ""
+
+msgid "普攻"
+msgstr ""
+
+msgid "最大轮数(0=无限制)"
 msgstr ""
 
 msgid "毎几秒释放一次技能"
 msgstr ""
 
-msgid "波次超时时间"
+msgid "每轮结束等待时间(秒)"
+msgstr ""
+
+msgid "波次超时后将发出提示"
+msgstr ""
+
+msgid "溜鱼阶段超时(秒)"
 msgstr ""
 
 msgid "激活键"
 msgstr ""
 
+msgid "示例-无巧手30火突破素材(1080p) by望目"
+msgstr ""
+
 msgid "终结技"
 msgstr ""
 
-msgid "自动65级魔之楔本"
+msgid "结束阶段超时(秒)"
+msgstr ""
+
+msgid "自动30/65级魔之楔本"
+msgstr ""
+
+msgid "自动70级皎皎币本"
 msgstr ""
 
 msgid "自动勘察"
@@ -231,7 +255,16 @@ msgstr ""
 msgid "自动肉鸽对话"
 msgstr ""
 
+msgid "自动花序弓蓄力瞄准"
+msgstr ""
+
+msgid "自动选择首个密函和密函奖励"
+msgstr ""
+
 msgid "自动释放技能"
+msgstr ""
+
+msgid "自动钓鱼"
 msgstr ""
 
 msgid "自动驱离"
@@ -240,14 +273,59 @@ msgstr ""
 msgid "超时后将发出提示"
 msgstr ""
 
+msgid "超时后将重启任务"
+msgstr ""
+
+msgid "超时时间"
+msgstr ""
+
+msgid "跳过对话"
+msgstr ""
+
 msgid "轮次"
+msgstr ""
+
+msgid "选择mod目录下的外部逻辑"
+msgstr ""
+
+msgid "释放间隔"
+msgstr ""
+
+msgid "键盘"
 msgstr ""
 
 msgid "间隔时间"
 msgstr ""
 
-msgid "需使用鼠标侧键主动激活"
+msgid "防止鼠标干扰"
 msgstr ""
 
-msgid "鼠标侧键"
+msgid "随机游走"
+msgstr ""
+
+msgid "需主动激活"
+msgstr ""
+
+msgid "需主动激活，运行中也可使用左键打断"
+msgstr ""
+
+msgid "需主动激活，运行中可使用右键或左键打断"
+msgstr ""
+
+msgid "鱼条最小面积(像素)"
+msgstr ""
+
+msgid "鱼标按空格区域占比(0-0.5)"
+msgstr ""
+
+msgid "鱼标最大面积(像素)"
+msgstr ""
+
+msgid "鱼标最小面积(像素)"
+msgstr ""
+
+msgid "默认"
+msgstr ""
+
+msgid "鼠标键或键盘按键"
 msgstr ""
