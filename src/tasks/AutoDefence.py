@@ -113,7 +113,7 @@ class AutoDefence(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         if self.current_wave != -1:
             # 如果是新的波次，重置状态
             if self.current_wave != self.runtime_state["wave"]:
-                self.runtime_state.update({"wave": self.current_wave, "wave_start_time": time.time()})
+                self.runtime_state.update({"wave": self.current_wave, "wave_start_time": time.time(), "wait_next_wave": False})
                 self.quick_move_task.reset()
 
             # 检查波次是否超时
