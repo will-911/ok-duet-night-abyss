@@ -99,6 +99,7 @@ class AutoDefence(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
 
     def init_all(self):
         self.init_for_next_round()
+        self.skill_tick.reset()
         self.current_round = 0
 
     def init_for_next_round(self):
@@ -106,7 +107,6 @@ class AutoDefence(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
 
     def init_runtime_state(self):
         self.runtime_state = {"wave_start_time": 0, "wave": -1, "wait_next_wave": False}
-        self.skill_tick.reset()
         self.reset_wave_info()
 
     def handle_in_mission(self):

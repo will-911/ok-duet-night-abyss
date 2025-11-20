@@ -108,6 +108,7 @@ class AutoHedge(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
 
     def init_all(self):
         self.init_for_next_round()
+        self.skill_tick.reset()
         self.current_round = 0
         self.track_point_pos = 0
         self.mission_complete = False
@@ -119,7 +120,6 @@ class AutoHedge(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
 
     def init_runtime_state(self):
         self.runtime_state = {"start_time": 0, "in_progress": False, "wait_next_round": False}
-        self.skill_tick.reset()
 
     def handle_in_mission(self):
         self.update_mission_status()
