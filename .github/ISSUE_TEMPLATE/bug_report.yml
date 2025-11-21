@@ -1,0 +1,97 @@
+name: Bug 反馈 (Bug Report)
+description: 创建一个报告以帮助我们修复问题
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  # --- 1. 这里就是你要的超链接部分 ---
+  - type: markdown
+    attributes:
+      value: |
+        ### 在提交 Issue 之前
+        请务必先搜索现有 ISSUE 和查阅常见问题，避免重复汇报。
+        
+        - 🔍 **搜索现有 ISSUE:** [点击搜索](https://github.com/BnanZ0/ok-duet-night-abyss/issues)
+        - 📖 **常见问题 FAQ:** [点击查看](https://github.com/BnanZ0/ok-duet-night-abyss?tab=readme-ov-file#-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B8%8E-faq)
+        - 💬 **讨论区:** [前往讨论](https://github.com/BnanZ0/ok-duet-night-abyss/discussions)
+
+  # --- 2. 问题描述 ---
+  - type: textarea
+    id: description
+    attributes:
+      label: 描述这个问题 (Bug)
+      description: 清晰简洁地描述发生的情况。
+      placeholder: 请在此处描述 Bug...
+    validations:
+      required: true
+
+  # --- 3. 复现步骤 ---
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 如何复现
+      description: 请详细列出复现步骤。
+      placeholder: |
+        1. 打开软件...
+        2. 点击设置...
+        3. 看到错误提示...
+    validations:
+      required: true
+
+  # --- 4. 是否必现 ---
+  - type: dropdown
+    id: probability
+    attributes:
+      label: 是否必现
+      options:
+        - 是
+        - 否
+        - 大概率
+        - 小概率
+    validations:
+      required: true
+
+  # --- 5. 截图、日志和录屏 (上传区域) ---
+  - type: textarea
+    id: attachments
+    attributes:
+      label: 截图、日志和录屏
+      description: |
+        **上传方式：** 
+        1. 将图片或视频文件直接 **拖拽** 到下方文本框中。
+        2. 日志内容可以直接粘贴，或将 `.log` 文件拖拽上传。
+        3. 也可以使用剪贴板粘贴图片 (Ctrl+V)。
+      placeholder: 请将截图、屏幕录像或日志文件拖放到此处...
+    validations:
+      required: false
+
+  # --- 6. 版本信息 (一行两个，更紧凑) ---
+  - type: input
+    id: version
+    attributes:
+      label: ok-dna出现bug的版本
+      placeholder: 例如：1.0.1
+    validations:
+      required: true
+
+  - type: input
+    id: last_working_version
+    attributes:
+      label: ok-dna最近未出现bug的版本 (选填)
+      placeholder: 例如：1.0.0
+
+  - type: input
+    id: os_version
+    attributes:
+      label: Windows 操作系统版本
+      placeholder: 例如：Windows 11 Pro 23H2 22631.3593
+    validations:
+      required: false
+
+  # --- 7. 补充信息 ---
+  - type: textarea
+    id: additional
+    attributes:
+      label: 其他补充内容
+      placeholder: 在这里添加关于该问题的任何其他背景信息...
+    validations:
+      required: false
