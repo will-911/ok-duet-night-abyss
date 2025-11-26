@@ -8,9 +8,8 @@ import win32con
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor
 from functools import cached_property
-from ok import Logger, TaskDisabledException, GenshinInteraction
 
-from ok import BaseTask, Box, Logger, color_range_to_bound, run_in_new_thread, og
+from ok import BaseTask, Box, Logger, color_range_to_bound, run_in_new_thread, og, GenshinInteraction
 
 logger = Logger.get_logger(__name__)
 f_black_color = {
@@ -90,6 +89,15 @@ class BaseDNATask(BaseTask):
     @property
     def thread_pool_executor(self) -> ThreadPoolExecutor:
         return og.my_app.get_thread_pool_executor()
+    
+    @cached_property
+    def genshin_interaction(self):
+        """
+        缓存 Interaction 实例，避免每次鼠标移动都重新创建对象。
+        需要确保 self.executor.interaction 和 self.hwnd 在此类初始化时可用。
+        """
+        # 确保引用的是正确的类
+        return GenshinInteraction(self.executor.interaction.capture, self.hwnd)
 
     def in_team(self) -> bool:
         frame = self.frame
@@ -383,18 +391,8 @@ class BaseDNATask(BaseTask):
             str: 螺旋飞跃的按键字符串。
         """
         return self.key_config['HelixLeap Key']
-    
-    @cached_property
-    def genshin_interaction(self):
-        """
-        缓存 Interaction 实例，避免每次鼠标移动都重新创建对象。
-        需要确保 self.executor.interaction 和 self.hwnd 在此类初始化时可用。
-        """
-        # 确保引用的是正确的类
-        return GenshinInteraction(self.executor.interaction.capture, self.hwnd)
-
         
-    def calculate_sensitivity(self, original_Xsensitivity, original_Ysensitivity, dx, dy):
+    def calculate_sensitivity(self, dx, dy, original_Xsensitivity=1.0, original_Ysensitivity=1.0):
         """计算玩家水平鼠标移动值和垂直鼠标移动值,并且移动鼠标.
 
         Returns:
@@ -403,7 +401,7 @@ class BaseDNATask(BaseTask):
 
         """
         # 判断设置中灵敏度开关是否打开
-        if self.sensitivity_config['Game Sensitivity Switch'] is True:
+        if self.sensitivity_config['Game Sensitivity Switch']:
             # 获取设置中的游戏灵敏度
             game_Xsensitivity = round(self.sensitivity_config['X-axis sensitivity'], 1)
             game_Ysensitivity = round(self.sensitivity_config['Y-axis sensitivity'], 1)
@@ -415,13 +413,16 @@ class BaseDNATask(BaseTask):
             else:
                 calculate_dx = dx / round(game_Xsensitivity / original_Xsensitivity, 10)
                 calculate_dy = dy / round(game_Ysensitivity / original_Ysensitivity, 10)
-            
-            self.try_bring_to_front()
-
-            # 使用缓存的实例
-            self.genshin_interaction.move_mouse_relative(int(calculate_dx), int(calculate_dy))
         else:
-            self.genshin_interaction.move_mouse_relative(int(dx), int(dy))
+            calculate_dx = dx
+            calculate_dy = dy
+
+        return calculate_dx, calculate_dy
+
+    def move_mouse_relative(self, dx, dy, original_Xsensitivity=1.0, original_Ysensitivity=1.0):
+        dx, dy = self.calculate_sensitivity(dx, dy, original_Xsensitivity, original_Ysensitivity)
+        self.try_bring_to_front()
+        self.genshin_interaction.move_mouse_relative(int(dx), int(dy))
 
     def try_bring_to_front(self):
         if not self.hwnd.is_foreground():

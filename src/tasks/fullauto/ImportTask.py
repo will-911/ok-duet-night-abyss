@@ -418,7 +418,7 @@ class ImportTask(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
 
         try:
             if action_type == "mouse_move":
-                self.calculate_sensitivity(self.original_Xsensitivity, self.original_Ysensitivity, action['dx'], action['dy'])
+                self.move_mouse_relative(action['dx'], action['dy'], self.original_Xsensitivity, self.original_Ysensitivity)
 
             elif action_type == "mouse_rotation":
                 self.execute_mouse_rotation(action)
@@ -513,7 +513,7 @@ class ImportTask(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
             return
 
         dx, dy = direction_map[direction]
-        self.calculate_sensitivity(self.original_Xsensitivity, self.original_Ysensitivity, dx, dy)
+        self.move_mouse_relative(dx, dy, self.original_Xsensitivity, self.original_Ysensitivity)
         logger.debug(f"鼠标视角旋转: {direction}, 角度: {angle}, 像素: {pixels}")
 
 
