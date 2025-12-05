@@ -336,7 +336,7 @@ class BaseDNATask(BaseTask):
 
         self.sleep(after_sleep)
     
-    def click_box_random(self, box: Box, down_time=0.0, post_sleep=1.0, after_sleep=0.0, use_safe_move=False, safe_move_box=None, left_extend=0.0, right_extend=0.0, up_extend=0.0, down_extend=0.0):
+    def click_box_random(self, box: Box, down_time=0.0, post_sleep=0.0, after_sleep=0.0, use_safe_move=False, safe_move_box=None, left_extend=0.0, right_extend=0.0, up_extend=0.0, down_extend=0.0):
         le_px = left_extend * self.width
         re_px = right_extend * self.width
         ue_px = up_extend * self.height
@@ -351,7 +351,7 @@ class BaseDNATask(BaseTask):
             down_time, post_sleep, after_sleep
         )
 
-    def click_relative_random(self, x1, y1, x2, y2, down_time=0.02, post_sleep=1.0, after_sleep=0.0, use_safe_move=False, safe_move_box=None):
+    def click_relative_random(self, x1, y1, x2, y2, down_time=0.02, post_sleep=0.0, after_sleep=0.0, use_safe_move=False, safe_move_box=None):
         r_x = random.uniform(x1, x2)
         r_y = random.uniform(y1, y2)
 
@@ -528,30 +528,43 @@ class BaseDNATask(BaseTask):
             if self.executor.current_task:
                 self.log_info("jitter loop task start")
             while self.executor.current_task is not None and not self.executor.exit_event.is_set():
-                if self.executor.paused or not self.afk_config.get("鼠标抖动", True):
+                if self.executor.paused:
                     time.sleep(0.1)
                     continue
-                if self.afk_config.get("鼠标抖动锁定在窗口范围", True):
-                    self.set_mouse_in_window()
+                # if not self.scene.in_team(self.in_team_and_world):
+                #     time.sleep(1)
+                #     continue
 
-                dist_sq = current_drift[0]**2 + current_drift[1]**2
-                
-                # 距离原点太近(<2px) -> 往外润 (3~5px)
-                if dist_sq < 4:
-                    target_x = random.choice([-3, -2, 2, 3])
-                    target_y = random.choice([-3, -2, 2, 3])
-                # 距离原点太远 -> 往回拉 (目标是原点附近的 -1~1px)
-                else:
-                    target_x = random.randint(-1, 1)
-                    target_y = random.randint(-1, 1)
+                key = random.choice(["z", "1", "2", "3"])
+                down_time = random.uniform(0.02, 0.12)
+                after_sleep = random.uniform(0.08, 0.15)
+                interaction = self.executor.interaction
+                vk_code = interaction.get_key_by_str(key)
+                interaction.post(win32con.WM_KEYDOWN, vk_code, interaction.lparam)
+                time.sleep(down_time)
+                interaction.post(win32con.WM_KEYUP, vk_code, interaction.lparam)
+                time.sleep(after_sleep)
 
-                move_x = target_x - current_drift[0]
-                move_y = target_y - current_drift[1]
+                if self.afk_config.get("鼠标抖动", True):
+                    if self.afk_config.get("鼠标抖动锁定在窗口范围", True):
+                        self.set_mouse_in_window()
 
-                if move_x != 0 or move_y != 0:
-                    self.genshin_interaction.do_move_mouse_relative(move_x, move_y)
-                    current_drift[0] += move_x
-                    current_drift[1] += move_y
+                    dist_sq = current_drift[0]**2 + current_drift[1]**2
+                    
+                    if dist_sq < 4:
+                        target_x = random.choice([-3, -2, 2, 3])
+                        target_y = random.choice([-3, -2, 2, 3])
+                    else:
+                        target_x = random.randint(-1, 1)
+                        target_y = random.randint(-1, 1)
+
+                    move_x = target_x - current_drift[0]
+                    move_y = target_y - current_drift[1]
+
+                    if move_x != 0 or move_y != 0:
+                        self.genshin_interaction.do_move_mouse_relative(move_x, move_y)
+                        current_drift[0] += move_x
+                        current_drift[1] += move_y
 
                 deadline = time.time() + random.uniform(3.0, 6.0)
                 while time.time() < deadline:
