@@ -76,6 +76,7 @@ class BaseDNATask(BaseTask):
         self.old_mouse_pos = None
         self.next_monthly_card_start = 0
         self._logged_in = False
+        self.enable_fidget_action = True
         self.hold_lalt = False
         self.sensitivity_config = self.get_global_config('Game Sensitivity Config')  # 游戏灵敏度配置
 
@@ -209,13 +210,12 @@ class BaseDNATask(BaseTask):
         if self.afk_config["防止鼠标干扰"]:
             self.old_mouse_pos = win32api.GetCursorPos() if save_current_pos else None
             if self.rel_move_if_in_win(0.95, 0.6, box=box):
-                self.sleep(0.001)
+                pass
             else:
                 self.old_mouse_pos = None
 
     def move_back_from_safe_position(self):
         if self.afk_config["防止鼠标干扰"] and self.old_mouse_pos is not None:
-            self.sleep(0.001)
             win32api.SetCursorPos(self.old_mouse_pos)
             self.old_mouse_pos = None
 
@@ -324,26 +324,25 @@ class BaseDNATask(BaseTask):
         x = int(x_abs)
         y = int(y_abs)
 
-        down_time = random.uniform(0.05, 0.12) + down_time
-        after_sleep = random.uniform(0.08, 0.15) + after_sleep
-        post_sleep = 0.15 if post_sleep < 0.15 else post_sleep
+        _post_sleep = 0.0 if post_sleep <= 0 else post_sleep + random.uniform(0.05, 0.15)
+        _down_time = random.uniform(0.06, 0.13) if down_time <= 0 else max(0.05, down_time + random.uniform(0.0, 0.13))
+        _after_sleep = random.uniform(0.01, 0.04) if after_sleep <= 0 else after_sleep + random.uniform(0.02, 0.08)
+        
+        self.sleep(_post_sleep)
 
         if not self.hwnd.is_foreground():
-            interval = random.uniform(0.08, 0.15)
-            self.sleep(random.uniform(0.08, post_sleep))
             if use_safe_move:
+                _down_time = 0.01 if down_time == 0.0 else down_time
                 self.move_mouse_to_safe_position(box=safe_move_box)
-                down_time = 0.01 if down_time == 0.0 else down_time
-            self.click(x, y, down_time=down_time, interval=interval)
+            self.click(x, y, down_time=_down_time)
             if use_safe_move:
                 self.move_back_from_safe_position()
         else:
-            self.sleep(random.uniform(0.08, post_sleep))
             self.pydirect_interaction.move(x, y)
             self.sleep(random.uniform(0.08, 0.12))
-            self.pydirect_interaction.click(down_time=down_time)
+            self.pydirect_interaction.click(down_time=_down_time)
 
-        self.sleep(after_sleep)
+        self.sleep(_after_sleep)
     
     def click_box_random(self, box: Box, down_time=0.0, post_sleep=0.0, after_sleep=0.0, use_safe_move=False, safe_move_box=None, left_extend=0.0, right_extend=0.0, up_extend=0.0, down_extend=0.0):
         le_px = left_extend * self.width
@@ -356,8 +355,11 @@ class BaseDNATask(BaseTask):
 
         self._perform_random_click(
             random_x, random_y, 
-            use_safe_move, safe_move_box, 
-            down_time, post_sleep, after_sleep
+            use_safe_move=use_safe_move,
+            safe_move_box=safe_move_box, 
+            down_time=down_time,
+            post_sleep=post_sleep,
+            after_sleep=after_sleep
         )
 
     def click_relative_random(self, x1, y1, x2, y2, down_time=0.0, post_sleep=0.0, after_sleep=0.0, use_safe_move=False, safe_move_box=None):
@@ -369,8 +371,11 @@ class BaseDNATask(BaseTask):
 
         self._perform_random_click(
             abs_x, abs_y, 
-            use_safe_move, safe_move_box, 
-            down_time, post_sleep, after_sleep
+            use_safe_move=use_safe_move,
+            safe_move_box=safe_move_box, 
+            down_time=down_time,
+            post_sleep=post_sleep,
+            after_sleep=after_sleep
         )
 
     def sleep_random(self, timeout, random_range: tuple = (1.0, 1.0)):
@@ -457,6 +462,33 @@ class BaseDNATask(BaseTask):
         tick.touch = touch
         tick.start_next_tick = start_next_tick
         return tick
+    
+    def create_ticker_group(self, tickers: list):
+    
+        def tick_all():
+            for ticker in tickers:
+                ticker()
+                
+        def reset_all():
+            for ticker in tickers:
+                if hasattr(ticker, "reset"):
+                    ticker.reset()
+
+        def touch_all():
+            for ticker in tickers:
+                if hasattr(ticker, "touch"):
+                    ticker.touch()
+
+        def start_next_tick_all():
+            for ticker in tickers:
+                if hasattr(ticker, "start_next_tick"):
+                    ticker.start_next_tick()
+
+        tick_all.reset = reset_all
+        tick_all.touch = touch_all
+        tick_all.start_next_tick = start_next_tick_all
+        
+        return tick_all
 
     def get_interact_key(self):
         """获取交互的按键。
@@ -531,7 +563,10 @@ class BaseDNATask(BaseTask):
                 self.hwnd.bring_to_front()
             self.sleep(0.5)
         
-    def setup_jitter(self):
+    def setup_fidget_action(self):
+        if not self.enable_fidget_action:
+            return
+
         lalt_pressed = False
         needs_resync = False
         _in_team = None
@@ -540,7 +575,7 @@ class BaseDNATask(BaseTask):
             deadline = time.time() + timeout
             while time.time() < deadline:
                 if self.executor.current_task is None or self.executor.exit_event.is_set():
-                    self.log_info("jitter loop task stopped")
+                    self.log_info("fidget action stopped")
                     return
                 check_alt()
                 time.sleep(0.1)
@@ -598,14 +633,14 @@ class BaseDNATask(BaseTask):
                     lalt_pressed = False
                     needs_resync = False
 
-        def _jitter_loop_task():
+        def _fidget_action():
             current_drift = [0, 0]
             spiral_key = self.get_spiral_dive_key()
             numeric_keys = [str(i) for i in range(1, 6) if str(i) != spiral_key][:4]
             random_key = [self.key_config['Geniemon Key']] + numeric_keys
 
             if self.executor.current_task:
-                self.log_info("jitter loop task start")
+                self.log_info("fidget action start")
 
             while self.executor.current_task is not None and not self.executor.exit_event.is_set():
                 if self.executor.paused:
@@ -642,7 +677,7 @@ class BaseDNATask(BaseTask):
 
                 sleep(random.uniform(3.0, 6.0))
 
-        self.thread_pool_executor.submit(_jitter_loop_task)
+        self.thread_pool_executor.submit(_fidget_action)
 
 track_point_color = {
     "r": (121, 255),  # Red range

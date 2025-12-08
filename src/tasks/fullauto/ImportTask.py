@@ -11,7 +11,7 @@ from pathlib import Path
 from PIL import Image
 from ok import Logger, TaskDisabledException, GenshinInteraction
 from src.tasks.DNAOneTimeTask import DNAOneTimeTask
-from src.tasks.CommissionsTask import CommissionsTask, Mission, QuickMoveTask
+from src.tasks.CommissionsTask import CommissionsTask, Mission, QuickAssistTask
 from src.tasks.BaseCombatTask import BaseCombatTask
 
 from src.tasks.AutoDefence import AutoDefence
@@ -38,8 +38,9 @@ class ImportTask(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         self.last_f_time = 0
         self.last_f_was_interact = False
 
+        self.setup_commission_config()
+
         self.default_config.update({
-            '轮次': 10,
             '外部文件夹': "",
             '副本类型': "默认",
             # '使用内建机关解锁': False,
@@ -53,10 +54,6 @@ class ImportTask(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
             "type": "drop_down",
             "options": ["默认", "扼守无尽", "探险无尽"],
         }
-        self.setup_commission_config()
-        keys_to_remove = ["启用自动穿引共鸣"]
-        for key in keys_to_remove:
-            self.default_config.pop(key, None)
 
         self.config_description.update({
             '轮次': '如果是无尽关卡，选择打几个轮次',
@@ -66,7 +63,7 @@ class ImportTask(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
 
         self.skill_tick = self.create_skill_ticker()
         self.action_timeout = 10
-        self.quick_move_task = QuickMoveTask(self)
+        self.quick_assist_task = QuickAssistTask(self)
 
     def run(self):
         DNAOneTimeTask.run(self)

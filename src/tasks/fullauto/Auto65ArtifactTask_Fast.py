@@ -25,19 +25,11 @@ class Auto65ArtifactTask_Fast(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         self.group_name = "全自动"
         self.group_icon = FluentIcon.CAFE
 
-        self.default_config.update({
-            "刷几次": 999,
-        })
-
         self.setup_commission_config()
-        substrings_to_remove = ["穿引共鸣", "密函"]
+        substrings_to_remove = ["轮次"]
         keys_to_delete = [key for key in self.default_config for sub in substrings_to_remove if sub in key]
         for key in keys_to_delete:
             self.default_config.pop(key, None)
-
-        self.config_description.update({
-            "刷几次": "总共刷多少次副本",
-        })
 
         self.action_timeout = 10
 

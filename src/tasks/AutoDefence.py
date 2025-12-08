@@ -4,7 +4,7 @@ import time
 from ok import Logger, TaskDisabledException
 from src.tasks.DNAOneTimeTask import DNAOneTimeTask
 from src.tasks.BaseCombatTask import BaseCombatTask
-from src.tasks.CommissionsTask import CommissionsTask, Mission, QuickMoveTask, _default_movement
+from src.tasks.CommissionsTask import CommissionsTask, Mission, QuickAssistTask, _default_movement
 
 logger = Logger.get_logger(__name__)
 
@@ -21,19 +21,14 @@ class AutoDefence(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         self.group_name = "半自动"
         self.group_icon = FluentIcon.VIEW
 
-        self.default_config.update({
-            '轮次': 3,
-        })
-
         self.setup_commission_config()
 
         self.config_description.update({
-            "轮次": "打几个轮次",
             "超时时间": "波次超时后将发出提示",
         })
 
         self.action_timeout = DEFAULT_ACTION_TIMEOUT
-        self.quick_move_task = QuickMoveTask(self)
+        self.quick_assist_task = QuickAssistTask(self)
         self.external_movement = _default_movement
         self._external_config = None
         self._merged_config_cache = None
@@ -116,7 +111,7 @@ class AutoDefence(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
             if self.current_wave != self.runtime_state["wave"]:
                 self.runtime_state.update(
                     {"wave": self.current_wave, "wave_start_time": time.time(), "wait_next_wave": False})
-                self.quick_move_task.reset()
+                self.quick_assist_task.reset()
 
             # 检查波次是否超时
             if not self.runtime_state["wait_next_wave"] and time.time() - self.runtime_state[
@@ -137,7 +132,7 @@ class AutoDefence(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
             if self.runtime_state["wave"] > 0:
                 self.init_runtime_state()
             # 如果不在战斗波次中，执行移动任务
-            self.quick_move_task.run()
+            self.quick_assist_task.run()
 
     def handle_mission_start(self):
         """处理任务开始的逻辑"""

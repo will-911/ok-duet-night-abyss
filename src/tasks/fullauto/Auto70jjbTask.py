@@ -1,14 +1,9 @@
 from qfluentwidgets import FluentIcon
-import re
 import time
-import win32con
-import win32gui
-import cv2
 
-from ok import Logger, TaskDisabledException, Box
-from ok import find_boxes_by_name
+from ok import Logger, TaskDisabledException
 from src.tasks.DNAOneTimeTask import DNAOneTimeTask
-from src.tasks.CommissionsTask import CommissionsTask, Mission, QuickMoveTask
+from src.tasks.CommissionsTask import CommissionsTask, QuickAssistTask
 from src.tasks.BaseCombatTask import BaseCombatTask
 
 from src.tasks.AutoDefence import AutoDefence
@@ -26,21 +21,10 @@ class Auto70jjbTask(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         self.group_name = "全自动"
         self.group_icon = FluentIcon.CAFE
 
-        self.default_config.update({
-            '轮次': 1,
-        })
-
         self.setup_commission_config()
-        keys_to_remove = ["启用自动穿引共鸣"]
-        for key in keys_to_remove:
-            self.default_config.pop(key, None)
-
-        self.config_description.update({
-            '轮次': '打几个轮次',
-        })
 
         self.action_timeout = 10
-        self.quick_move_task = QuickMoveTask(self)
+        self.quick_assist_task = QuickAssistTask(self)
 
     def run(self):
         DNAOneTimeTask.run(self)

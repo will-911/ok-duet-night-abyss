@@ -1,10 +1,8 @@
-import time
-
 from ok import Logger, TaskDisabledException
 from qfluentwidgets import FluentIcon
 
 from src.tasks.AutoExploration import AutoExploration
-from src.tasks.CommissionsTask import CommissionsTask, QuickMoveTask
+from src.tasks.CommissionsTask import CommissionsTask, QuickAssistTask
 from src.tasks.DNAOneTimeTask import DNAOneTimeTask
 from src.tasks.trigger.AutoMazeTask import AutoMazeTask
 from src.tasks.trigger.AutoRouletteTask import AutoRouletteTask
@@ -41,9 +39,6 @@ class AutoExploration_Fast(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
             '地图选择': '选择要自动执行的地图类型',
         })
         self.setup_commission_config()
-        keys_to_remove = ["启用自动穿引共鸣"]
-        for key in keys_to_remove:
-            self.default_config.pop(key, None)
         
         # 设置地图选择为下拉选择
         self.config_type["地图选择"] = {
@@ -51,7 +46,7 @@ class AutoExploration_Fast(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
             "options": ["探险电梯", "探险高台", "探险平地"],
         }
         self.action_timeout = DEFAULT_ACTION_TIMEOUT
-        self.quick_move_task = QuickMoveTask(self)
+        self.quick_assist_task = QuickAssistTask(self)
         
         # 地图检测点和执行函数的映射字典
         self.map_configs = {

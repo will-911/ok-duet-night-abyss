@@ -2,7 +2,7 @@ from qfluentwidgets import FluentIcon
 import time
 
 from ok import Logger, TaskDisabledException
-from src.tasks.CommissionsTask import CommissionsTask, QuickMoveTask, Mission, _default_movement
+from src.tasks.CommissionsTask import CommissionsTask, QuickAssistTask, Mission, _default_movement
 from src.tasks.BaseCombatTask import BaseCombatTask
 from src.tasks.DNAOneTimeTask import DNAOneTimeTask
 
@@ -21,19 +21,14 @@ class AutoExploration(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         self.group_name = "半自动"
         self.group_icon = FluentIcon.VIEW
 
-        self.default_config.update({
-            '轮次': 3,
-        })
-
         self.setup_commission_config()
 
         self.config_description.update({
-            '轮次': '打几个轮次',
             '超时时间': '超时后将发出提示',
         })
 
         self.action_timeout = DEFAULT_ACTION_TIMEOUT
-        self.quick_move_task = QuickMoveTask(self)
+        self.quick_assist_task = QuickAssistTask(self)
         self.external_movement = _default_movement
         self._external_config = None
         self.skill_tick = self.create_skill_ticker()
@@ -111,7 +106,7 @@ class AutoExploration(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         if self.find_serum():
             if self.runtime_state["start_time"] == 0:
                 self.runtime_state["start_time"] = time.time()
-                self.quick_move_task.reset()
+                self.quick_assist_task.reset()
             
             if not self.runtime_state["wait_next_round"] and time.time() - self.runtime_state["start_time"] >= self.config.get("超时时间", 120):
                 if self.external_movement is not _default_movement:
@@ -128,7 +123,7 @@ class AutoExploration(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         else:
             if self.runtime_state["start_time"] > 0:
                 self.init_runtime_state()
-            self.quick_move_task.run()
+            self.quick_assist_task.run()
 
     def handle_mission_start(self):
         if self.external_movement is not _default_movement:
