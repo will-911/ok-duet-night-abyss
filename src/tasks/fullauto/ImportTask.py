@@ -348,9 +348,10 @@ class ImportTask(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
 
             count += 1
 
-            if self.height != 1080:
-                scale_factor = self.height / 1080
-                template_gray = cv2.resize(template_gray, (0, 0), fx=scale_factor, fy=scale_factor, interpolation=cv2.INTER_LINEAR)
+            # if self.height != 1080:
+            #     scale_factor = self.height / 1080
+            #     template_gray = cv2.resize(template_gray, (0, 0), fx=scale_factor, fy=scale_factor, interpolation=cv2.INTER_LINEAR)
+
             # 执行匹配
             result = cv2.matchTemplate(screen_gray, template_gray, cv2.TM_CCOEFF_NORMED)
             _, threshold, _, _, = cv2.minMaxLoc(result)
