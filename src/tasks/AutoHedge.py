@@ -134,7 +134,7 @@ class AutoHedge(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
                 "start_time"] >= self.config.get("超时时间", 120):
                 if self.external_movement is not _default_movement:
                     self.log_info("任务超时")
-                    self.open_in_mission_menu()
+                    self.give_up_mission()
                     return
                 else:
                     self.log_info_notify("任务超时")

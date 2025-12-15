@@ -129,7 +129,7 @@ class CommissionsTask(BaseDNATask):
 
     def give_up_mission(self, timeout=0):
         def is_mission_start_iface():
-            return self.find_retry_btn() or self.find_bottom_start_btn() or self.find_big_bottom_start_btn()
+            return self.find_retry_btn() or self.find_bottom_start_btn() or self.find_big_bottom_start_btn() or self.find_continue_btn() or self.find_esc_menu()
 
         action_timeout = self.action_timeout if timeout == 0 else timeout
         box = self.box_of_screen_scaled(2560, 1440, 1301, 776, 1365, 841, name="give_up_mission", hcenter=True)
@@ -149,7 +149,7 @@ class CommissionsTask(BaseDNATask):
                 raise_if_not_found=True,
             )
 
-        self.wait_until(condition=is_mission_start_iface, time_out=60, raise_if_not_found=True)
+        self.wait_until(condition=is_mission_start_iface, time_out=60, raise_if_not_found=False)
 
     def continue_mission(self, timeout=0):
         if self.in_team():

@@ -117,8 +117,8 @@ class ImportTask(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
                 self.skill_tick()
                 if time.time() - self.runtime_state["wave_start_time"] >= self.config.get('超时时间', 180):
                     self.log_info('任务超时')
-                    self.open_in_mission_menu()
-                    self.sleep(0.5)
+                    self.give_up_mission()
+                    continue
                 if self.delay_index is not None and time.time() > self.runtime_state["delay_task_start"]:
                     self.runtime_state["delay_task_start"] += 1
                     if self.match_map(self.delay_index):

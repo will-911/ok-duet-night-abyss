@@ -111,7 +111,7 @@ class AutoExploration(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
             if not self.runtime_state["wait_next_round"] and time.time() - self.runtime_state["start_time"] >= self.config.get("超时时间", 120):
                 if self.external_movement is not _default_movement:
                     self.log_info("任务超时")
-                    self.open_in_mission_menu()
+                    self.give_up_mission()
                     return
                 else:
                     self.log_info_notify("任务超时")
