@@ -325,6 +325,7 @@ class CommissionsTask(BaseDNATask):
                 raise_if_not_found=True,
             )
         self.sleep(0.1)
+        self.wait_until(lambda: not self.in_team(), time_out=3, settle_time=0.5)
 
     def create_skill_ticker(self):
         skills = []
@@ -487,12 +488,14 @@ class CommissionsTask(BaseDNATask):
             time_out=10,
         )
         confirm_box = self.box_of_screen_scaled(2560, 1440, 1298, 776, 1368, 843, name="confirm_btn", hcenter=True)
+        safe_box = self.box_of_screen_scaled(2560, 1440, 125, 207, 1811, 1234, name="safe_box", hcenter=True)
         self.wait_until(
             condition=lambda: self.find_start_btn(box=confirm_box),
-            post_action=lambda: self.click_relative_random(0.501, 0.294, 0.690, 0.325, use_safe_move=True),
+            post_action=lambda: self.click_relative_random(0.501, 0.294, 0.690, 0.325, use_safe_move=True, safe_move_box=safe_box),
             time_out=10,
         )
-        if not self.wait_until(condition=self.in_team, post_action=lambda: self.click_relative_random(0.514, 0.547, 0.671, 0.578, after_sleep=0.5),
+        safe_box = self.box_of_screen_scaled(2560, 1440, 1298, 772, 1735, 846, name="safe_box", hcenter=True)
+        if not self.wait_until(condition=self.in_team, post_action=lambda: self.click_relative_random(0.514, 0.547, 0.671, 0.578, after_sleep=0.5, use_safe_move=True, safe_move_box=safe_box),
                                time_out=10):
             self.ensure_main()
             return False
