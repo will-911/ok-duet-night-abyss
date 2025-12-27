@@ -72,14 +72,15 @@ class BaseChar:
         self.task.send_key_down("CONTROL")
         
         # 2. 稍微等待，确保系统/游戏识别到 Ctrl 已按住 (防止判定为单独按 E)
-        time.sleep(0.05) 
+        # 不设置check_combat=False，会报错sleep check not in combat
+        self.sleep(0.05, check_combat=False) 
         
         # 3. 发送战技 (按 E)
         # 直接调用现有的 send_combat_key 方法
         self.send_combat_key()
         
         # 4. 稍微等待，防止释放过快
-        time.sleep(0.05)
+        self.sleep(0.05, check_combat=False)
         
         # 5. 释放 Ctrl - 使用 ok 框架支持的 "CONTROL" 键名
         self.task.send_key_up("CONTROL")
