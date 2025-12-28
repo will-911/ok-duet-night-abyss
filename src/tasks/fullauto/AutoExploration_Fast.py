@@ -89,27 +89,29 @@ class AutoExploration_Fast(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
                 _to_do_task.info_set = original_info_set
 
     def walk_to_aim(self, delay=0):
-        self.sleep(delay)
-        map_selection = self.config.get("地图选择", [])
-        
-        # 检测当前地图类型
-        current_map = self.detect_current_map()
-        
-        # 如果检测到未知地图，抛出地图识别错误
-        if current_map == "未知地图":
-            raise MapDetectionError("无法识别当前地图类型")
-        
-        # 如果选择了特定地图，但当前不是该地图，抛出地图识别错误
-        if len(map_selection) != 0 and current_map not in map_selection:
-            raise MapDetectionError(f"当前地图[{current_map}]不匹配选择的地图{map_selection}")
-        
-        # 执行对应地图的移动逻辑
-        if current_map in self.map_configs:
-            self.log_info(f"识别到地图类型：{current_map}，开始执行移动逻辑")
-            return self.map_configs[current_map]["execute_func"]()
-        else:
-            # 这种情况理论上不应该发生，因为current_map是从map_configs中检测出来的
-            raise MapDetectionError(f"地图配置不一致，检测到地图[{current_map}]但找不到对应的执行函数")
+        try:
+            self.send_key_down("lalt")
+            self.sleep(delay)
+            map_selection = self.config.get("地图选择", [])
+            current_map = self.detect_current_map()
+
+            # 如果检测到未知地图，抛出地图识别错误
+            if current_map == "未知地图":
+                raise MapDetectionError("无法识别当前地图类型")
+            
+            # 如果选择了特定地图，但当前不是该地图，抛出地图识别错误
+            if len(map_selection) != 0 and current_map not in map_selection:
+                raise MapDetectionError(f"当前地图[{current_map}]不匹配选择的地图{map_selection}")
+            
+            # 执行对应地图的移动逻辑
+            if current_map in self.map_configs:
+                self.log_info(f"识别到地图类型：{current_map}，开始执行移动逻辑")
+                return self.map_configs[current_map]["execute_func"]()
+            else:
+                # 这种情况理论上不应该发生，因为current_map是从map_configs中检测出来的
+                raise MapDetectionError(f"地图配置不一致，检测到地图[{current_map}]但找不到对应的执行函数")
+        finally:
+            self.send_key_up("lalt")
     
     def detect_current_map(self):
         """检测当前地图类型"""
@@ -136,7 +138,7 @@ class AutoExploration_Fast(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         self.log_info("执行探险电梯地图移动")
         self.reset_and_transport()
         self.send_key_down("lalt")
-        self.sleep(0.05)
+        self.sleep(0.1)
         self.send_key_down("a")
         self.sleep(0.1)
         self.send_key_down(self.get_dodge_key())
@@ -155,26 +157,11 @@ class AutoExploration_Fast(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         self.send_key(self.get_interact_key(), down_time=0.1,after_sleep=0.8)
         if not self.try_solving_puzzle():
             return True
-        # self.send_key_down("a")
-        # self.sleep(0.1)
-        # self.send_key(self.get_dodge_key(), down_time=0.2,after_sleep=0.6)
-        # self.send_key_down(self.get_dodge_key())
-        # self.sleep(0.9)
-        # self.send_key_down("w")
-        # self.sleep(0.2)
-        # self.send_key_up("a")
-        # self.sleep(0.1)
-        # self.send_key_up(self.get_dodge_key())
-        # self.send_key_up("w")
-        # self.sleep(0.2)
-        self.send_key_up("lalt")
         return True
     
     def execute_platform_map(self):
         """执行探险高台地图的移动逻辑"""
         self.log_info("执行探险高台地图移动")
-        self.send_key_down("lalt")
-        self.sleep(0.05)
         self.send_key_down("w")
         self.sleep(0.1)
         self.send_key_down(self.get_dodge_key())
@@ -195,19 +182,43 @@ class AutoExploration_Fast(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         self.send_key(self.get_interact_key(), down_time=0.1,after_sleep=0.8)
         if not self.try_solving_puzzle():
             return True
-        self.send_key_down("d")
-        self.sleep(0.1)
-        self.send_key(self.get_dodge_key(),  down_time=0.2)
-        self.sleep(0.1)
-        self.send_key_up("d")
+        self.send_key_down("lalt")
         self.sleep(0.1)
         self.send_key_down("s")
-        self.sleep(0.1)
-        self.send_key_up(self.get_dodge_key())
+        self.sleep(0.5)
         self.send_key_up("s")
+        self.send_key_down("d")
+        self.sleep(0.1)
+        self.send_key("space", down_time=0.1,after_sleep=0.1)
+        self.send_key(self.get_dodge_key(),  down_time=0.2,after_sleep=0.3)
+        self.send_key("space", down_time=0.1,after_sleep=0.7)
         self.sleep(0.2)
+        self.send_key_up("d")
+        self.send_key_down("s")
+        self.sleep(0.1)
+        self.send_key(self.get_dodge_key(),  down_time=0.2,after_sleep=0.3)
+        self.sleep(0.2)
+        self.send_key_up("s")
+        self.send_key_down("d")
+        self.sleep(0.1)
+        self.send_key("space", down_time=0.1,after_sleep=0.1)
+        self.sleep(0.1)
+        self.send_key_up("d")
+        self.sleep(1)
+        self.send_key_down("w")
+        self.sleep(2)
+        self.send_key_down("d")
+        self.sleep(0.2)
+        self.send_key("space", down_time=0.1,after_sleep=0.1)
+        self.send_key("space", down_time=0.5,after_sleep=0.7)
+        self.sleep(0.2)
+        self.send_key_up("d")
+        self.sleep(0.2)
+        self.send_key("space", down_time=0.1,after_sleep=0.1)
+        self.send_key("space", down_time=0.7,after_sleep=0.7)
+        self.sleep(0.5)
+        self.send_key_up("w")
         self.middle_click()
-        self.send_key_up("lalt")
         return True
     
     def execute_ground_map(self):
@@ -215,7 +226,7 @@ class AutoExploration_Fast(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         self.log_info("执行探险平地地图移动")
         self.reset_and_transport()
         self.send_key_down("lalt")
-        self.sleep(0.05)
+        self.sleep(0.1)
         self.send_key_down("a")
         self.sleep(0.1)
         self.send_key(self.get_dodge_key(), down_time=1.1)
@@ -224,12 +235,32 @@ class AutoExploration_Fast(DNAOneTimeTask, CommissionsTask, BaseCombatTask):
         self.send_key(self.get_interact_key(), down_time=0.1,after_sleep=0.8)
         if not self.try_solving_puzzle():
             return True
-        self.send_key('d',down_time=0.8,after_sleep=0.1)
+        self.send_key_down("lalt")
+        self.sleep(0.1)
+        self.send_key_down("w")
+        self.sleep(0.1)
+        self.send_key_down(self.get_dodge_key())
+        self.sleep(1.2)
+        self.send_key_up("w")
+        self.send_key_down("d")
+        self.sleep(0.8)
+        self.send_key_up("d")
+        self.send_key_down("w")
+        self.sleep(0.1)
+        self.send_key_down(self.get_dodge_key())
+        self.sleep(1.5)
+        self.send_key_up("w")
+        self.sleep(0.1)
+        self.send_key_down("a")
+        self.sleep(0.3)
+        self.send_key_up("a")
+        self.send_key_down("s")
+        self.sleep(0.1)
+        self.send_key_up("s")
+        self.sleep(0.1)
         self.middle_click()
-        self.send_key_up("lalt")
         return True
-            
-            
+
     def find_track_point(self, x1, y1, x2, y2) -> bool:
         box = self.box_of_screen_scaled(2560, 1440, 2560*x1, 1440*y1, 2560*x2, 1440*y2, name="find_track_point", hcenter=True)
         result = super().find_track_point(threshold=0.7, box=box)
